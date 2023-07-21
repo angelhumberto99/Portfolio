@@ -5,7 +5,9 @@
 
 <template>
   <header>
-    este es el header
+    <nav>
+      <h1>este es el header</h1>
+    </nav>
   </header>
   <Profile/>
   <Projects/>
@@ -14,10 +16,20 @@
 <style scoped>
   header {
     position: sticky;
-    height: 50px;
-    width: 100%;
+    height: 0;
     z-index: 1;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.3);    
+    /* mix-blend-mode: difference; */
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+  }
+  nav {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 </style>

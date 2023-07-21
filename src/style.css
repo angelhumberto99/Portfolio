@@ -12,11 +12,12 @@
 
 body, html {
   margin: 0;
+  padding: 0;
 }
 
 #app {
   height: 100vh;
-  overflow-y: scroll;
+  overflow: hidden scroll;
   scroll-snap-type: y mandatory;
 }
 
