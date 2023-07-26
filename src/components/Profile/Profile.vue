@@ -1,5 +1,6 @@
 <script lang="ts">
   import { GlassCard, SnapObservable } from '../Containers';
+  import AnchorCover from '../AnchorCover/AnchorCover.vue';
   export default {
     name: "Profile",
     data() {
@@ -10,40 +11,42 @@
     },
     components: {
       GlassCard,
-      SnapObservable
+      SnapObservable,
+      AnchorCover
     }
   }
 </script>
 
 <template>
-  <SnapObservable @observable="observe" class="wallpaper">
+  <SnapObservable @observable="observe">
     <section class="container">
       <section class="data-container">
-        <header>
+        <header :class="show?'show':'hide'" style="--delay: .8s">
           <h1>FRONTEND DEVELOPER</h1>
           <h4>André Ángel Humberto Gutiérrez Alatorre</h4>
         </header>
-        <p>
+        <p :class="show?'show':'hide'" style="--delay: 1s">
           Experienced Computer Engineer in web application development,
           focused on creating responsive, complex, interactive
           and attractive user interfaces.
         </p>
         <footer class="links-footer">
-          <a class="circular-anchor" href="https://www.linkedin.com/in/andr%C3%A9-%C3%A1ngel-humberto-guti%C3%A9rrez-alatorre-014224240/" target="_blank">
+          <AnchorCover color="#1da1f2" :animate="show" delay=".5s"
+            href="https://www.linkedin.com/in/andr%C3%A9-%C3%A1ngel-humberto-guti%C3%A9rrez-alatorre-014224240/" target="_blank">
             <font-awesome-icon :icon="['fab', 'linkedin']" />
-          </a>
-          <a class="circular-anchor" href="https://github.com/angelhumberto99" target="_blank">
+          </AnchorCover>
+          <AnchorCover color="#6e5dd8" :animate="show" delay="1s"
+            href="https://github.com/angelhumberto99" target="_blank">
             <font-awesome-icon :icon="['fab', 'github']" />
-          </a>
+          </AnchorCover>
         </footer>
       </section>
-      <section class="image-container">
-        <img src="../../assets/profile-placeholder.png" alt="profile image"/>
+      <section :class="['image-container', show? 'img-show': 'img-hide']">
+        <div class="blob">
+          <img src="../../assets/profile-placeholder.png" alt="profile image"/>
+        </div>
       </section>
     </section>
-    <footer class="profile-footer">
-      <font-awesome-icon :icon="['fas', 'chevron-down']" />
-    </footer>
   </SnapObservable>
 </template>
 
