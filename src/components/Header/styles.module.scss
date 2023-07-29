@@ -24,7 +24,7 @@ nav {
 }
 
 a {
-  padding: 0;
+  padding: 5px 5px;
   margin: 0;
   text-decoration: none;
   &:active {
@@ -32,6 +32,11 @@ a {
   }
   &:visited {
     color: white;
+  }
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 5px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -54,20 +59,31 @@ a {
 
 .menu {
   display: flex;
+  position: relative;
   gap: 1rem;
   padding: 0;
   margin: 0;
   line-height: 36px;
-  list-style: none; 
+  list-style: none;
 }
 
-.hideMenu {
-  translate: -102%;
+.hover-anchor {
+  border-radius: 5px;
+  position: absolute;
+  width: var(--width-anchor);
+  height: var(--height-anchor);
+  background-color: rgba(0, 0, 0, .5);
+  top: 2px;
+  left: var(--x-position);
+  z-index: -1;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
 @media (width < 768px) {
+  .hover-anchor {
+    visibility: hidden;
+  }
   .menu {
-    transition: translate .3s ease;
     flex-direction: column;
     position: fixed;
     inset: 0;
@@ -95,6 +111,11 @@ a {
         background-color: #6e5dd8;
       }
     }
+    translate: -102%;
+    transition: translate .3s ease;
+  }
+  .showMenu {
+    translate: 0;
   }
   .desktop {
     display: none;
@@ -108,7 +129,5 @@ a {
   nav {
     padding: .5rem 1rem;
   }
-  .menu {
-    padding-top: 4rem;
-  }
 }
+
