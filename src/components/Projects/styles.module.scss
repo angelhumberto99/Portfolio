@@ -1,7 +1,12 @@
-.wallpaper {
-  background-color: #eae7dc;
+.background {
+  background-color: white;
+  height: auto;
+  padding-top: 4.5rem;
 }
-
+.content {
+  width: 100%;
+  height: 200vh;
+}
 .container {
   width: 100%;
   height: 100%;
@@ -18,4 +23,10 @@
 .hide {
   opacity: 0;
   translate: -100%;
+}
+
+@media (width < 768px) {
+  .background {
+    padding-top: 2.5rem;
+  }
 }

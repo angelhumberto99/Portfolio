@@ -1,0 +1,16 @@
+.background {
+  background-color: #eefff9;
+  padding-top: 4.5rem;
+  height: calc(100vh - 4.5rem);
+}
+
+.content {
+  margin: auto;
+}
+
+@media (width < 768px) {
+  .background {
+    padding-top: 2.5rem;
+    height: calc(100vh - 2.5rem);
+  }
+}

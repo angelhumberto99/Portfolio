@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  <SnapObservable @observable="observe">
+  <SnapObservable @observable="observe" class="background">
     <section class="container">
       <section class="data-container">
         <header :class="show?'show':'hide'" style="--delay: .8s">

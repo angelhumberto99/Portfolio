@@ -6,7 +6,13 @@
         showMenu: false as Boolean,
         xPosition: 0 as number,
         currentWidth: 0 as number,
-        currentHeight: 0 as number
+        currentHeight: 0 as number,
+        pages: [
+          "Profile",
+          "About",
+          "Projects",
+          "Contact"
+        ]
       }
     },
     methods: {
@@ -61,12 +67,11 @@
       </h1>
       <ul :class="['menu', {showMenu}]" ref="listRef">
         <li class="hover-anchor" :style="getHover"></li>
-        <li>
-          <a @click="setHover" href="#Profile">Profile</a>
-        </li>
-        <li>
-          <a @click="setHover" href="#Projects">Projects</a>
-        </li>
+        <template v-for="page in pages">
+          <li>
+            <a @click="setHover" :href="`#${page}`">{{page}}</a>
+          </li>
+        </template>
       </ul>
     </nav>
   </header>

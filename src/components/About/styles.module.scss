@@ -1,0 +1,14 @@
+.background {
+  background-color: #f0eeff;
+  padding-top: 4.5rem;
+}
+
+.content {
+  width: 100%;
+}
+
+@media (width < 768px) {
+  .background {
+    padding-top: 2.5rem;
+  }
+}
