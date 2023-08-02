@@ -1,0 +1,77 @@
+.timestamp {
+  display: flex;
+  margin: 2rem auto;
+  max-width: 800px;
+  align-items: center;
+  button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 3rem;
+    cursor: pointer;
+  }
+  transition: translate 0.5s ease;
+}
+
+.disapair {
+  translate: 100%;
+}
+
+.disapair-reversed {
+  translate: -100%;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+  button {
+    margin-left: 3rem;
+    margin-right: 0;
+  }
+}
+
+.timeline-card {
+  display: flex;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+  0 18px 36px -18px rgba(0, 0, 0, 0.3),
+  0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.date {
+  background-color: orange;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  background-color: white;
+  padding: 1.5rem 1rem;
+  flex: 2;
+  h3 {
+    margin: 0;
+  }
+}
+
+.description {
+  margin: .5rem 0;
+  
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem;
+}
+
+.badge {
+  border-radius: 20px;
+  padding: 0 .5rem;
+  background-color: white;
+  box-shadow: 
+    3px 3px 5px rgba(0, 0, 0, 0.2),
+    -3px 3px 5px rgba(0, 0, 0, 0.2);
+}

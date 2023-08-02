@@ -1,11 +1,10 @@
 .background {
-  background-color: white;
+  background-color: #f6f9fc;
   height: auto;
   padding-top: 4.5rem;
 }
 .content {
   width: 100%;
-  height: 200vh;
 }
 .container {
   width: 100%;
@@ -13,16 +12,24 @@
   margin: auto;
   display: flex;
 }
-
 .show {
   transition: opacity 1s, translate 1s ease;
   transition-delay: var(--delay, 0s);
   opacity: 1;
 }
-
 .hide {
   opacity: 0;
   translate: -100%;
+}
+
+table {
+  border-spacing: 0;
+}
+.app-dock {
+
+  button {
+    width: 100%;
+  }
 }
 
 @media (width < 768px) {

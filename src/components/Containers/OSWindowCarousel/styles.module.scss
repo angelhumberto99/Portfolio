@@ -1,10 +1,12 @@
 .window-frame {
   background-color: #212121;
   width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   border-radius: 5px;
   padding: .3rem;
   overflow: hidden;
+  transition: scale 0.3s;
 }
 
 .window-header {
@@ -45,32 +47,32 @@
   }
 }
 
-.window-actions {
+.window-action {
   position: relative;
   padding: 0;
-  margin: 0;
-  width: .8rem;
-  height: .8rem;
+  margin: 0 .2rem 0 0;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   background-color: #ff605c;
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #00ca4e;
-    position: absolute;
-    border-radius: 50%;
-    left: calc(-200% - 6px);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.1s ease;
+  &:hover {
+    opacity: .6;
   }
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: #ffbd44;
-    border-radius: 50%;
-    left: calc(-100% - 3px);
+  &:active {
+    opacity: .2;
   }
+}
+
+.minimize {
+  background-color: #00ca4e;
+}
+
+.maximize {
+  background-color: #ffbd44;
 }
 
 .window-tab {
@@ -97,4 +99,8 @@
 
 .grabbing {
   cursor: grabbing !important;
+}
+
+.close {
+  scale: 0;
 }

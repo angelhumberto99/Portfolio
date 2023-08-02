@@ -1,0 +1,65 @@
+{
+  "Assist": {
+    "date": "2022",
+    "imgs": [
+      "1-Dashboard.jpg",
+      "2-Ticket-System.jpg",
+      "3-Widget.jpg"
+    ],
+    "description": "Chat application",
+    "tecnologies": [
+      "React.js", "Socket.io", "Docker", "Docker-Compose", "Laravel", "RASA", "Python"
+    ]
+  },
+  "Typed": {
+    "date": "2023",
+    "imgs": [
+      "1-Layouts_Dark.gif",
+      "2-Layouts_Light.gif",
+      "3-Test_Light.gif",
+      "4-Test_Dark.gif",
+      "5-Analytics-Dark.gif",
+      "6-Analytics-Light.gif",
+      "7-Reset_Dark.gif",
+      "8-Reset_Light.gif"
+    ],
+    "description": "Minigame for a speed typing challenge",
+    "tecnologies": ["React.js", "Typescript"]
+  },
+  "This Cord": {
+    "date": "2022",
+    "imgs": [
+      "1-Login.gif",
+      "2-Send_Message.gif",
+      "3-Create_Server.gif",
+      "4-Send_DM.gif",
+      "5-Join_Server.gif"
+    ],
+    "description": "Concurrent chat application, based on the most popular voice chatting app 'Discord'",
+    "tecnologies": ["React.js", "Socket.io", "Docker", "Docker-Compose", "Node.js"]
+  },
+  "Instantgrams": {
+    "date": "2023",
+    "imgs": [],
+    "description": "Application that shows the main page of instagram",
+    "tecnologies": ["Angular", "Spring-Boot"]
+  },
+  "3D Projection": {
+    "date": "2022",
+    "imgs": [],
+    "description": "Simple 3D renderer that shows 3D meshes on screen",
+    "tecnologies": ["Python", "Pygame", "Numpy", "Pandas"]
+  },
+  "React Native Shop": {
+    "date": "2021",
+    "imgs": [],
+    "description": "Ecommerce mobile application simulator",
+    "tecnologies": ["React Native", "Node.js"]
+  },
+  "React Native Calculator": {
+    "date": "2021",
+    "imgs": [],
+    "description": "Simple calculator for mobile devices",
+    "tecnologies": ["React Native"]
+  }
+}

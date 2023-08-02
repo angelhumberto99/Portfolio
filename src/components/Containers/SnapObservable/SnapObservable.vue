@@ -8,14 +8,15 @@
     },
     methods: {
       setIntersectionObserver: function (rootMargin = "-1px") {
-        const { observableRef } = this.$refs;
+        const observableRef = this.$refs.observableRef as HTMLDivElement;
         // Prevent duplicate observers
         if (this.observer !== null || observableRef === null) return;
 
         // Emit everytime this component shows on screen
         this.observer = new IntersectionObserver((entries) => {
           this.$emit("observable", entries[0].isIntersecting);
-        }, { rootMargin }).observe(observableRef);
+        }, { rootMargin })
+        this.observer.observe(observableRef);
       }
     },
     mounted() {
