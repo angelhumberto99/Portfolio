@@ -1,23 +1,39 @@
 <script lang="ts">
-  import path from "path";
   export default {
     name: "OSWindow",
     props: ["title", "imgs"],
     data() {
       return { 
         index: 0 as number,
-        grabbing: false as boolean
+        grabbing: false as boolean,
+        clickPosX: 0 as number,
+        currentScrollX: 0 as number,
+        startClick: 0 as Date | number
       }
     },
     methods: {
-      getImgName(img) {
-        return img.slice(img.lastIndexOf("/") + 1)
+      getImgName(img: string) {
+        return img?.slice(img?.lastIndexOf("/") + 1)
       },
       scrollOnGrabbing(evt: any) {
         if (!this.grabbing) return
-        const { tabList } = this.$refs
-        const { left } = tabList.getBoundingClientRect()
-        tabList.scrollLeft = evt.x - left
+        const { tabList }: {tabList: HTMLUListElement } = this.$refs
+        const dx = this.clickPosX - evt.x
+        tabList.scrollLeft = this.currentScrollX + dx
+      },
+      handleMouseDown(evt: any) {
+        const { tabList }: {tabList: HTMLUListElement } = this.$refs
+        this.startClick = new Date();
+        this.clickPosX = evt.x
+        this.currentScrollX = tabList.scrollLeft
+        this.grabbing = true
+      },
+      handleMouseUp(index: number) {
+        const currentTime = new Date()
+        this.grabbing = false
+        if ((currentTime - this.startClick) < 500 && index >= 0) {
+          this.index = index
+        }
       }
     },
     computed: {
@@ -33,13 +49,14 @@
   <section class="window-frame">
     <header class="window-header">
       <section class="header-top">
-        <ul ref="tabList" :class="['window-tabs', {grabbing}]" 
-          @mousedown="grabbing=true"
-          @mouseup="grabbing=false"
+        <ul ref="tabList" :class="['window-tabs', {grabbing}]"
+          @mouseup="handleMouseUp"
+          @mousedown="handleMouseDown"
           @mousemove="scrollOnGrabbing"
+          @mouseleave="handleMouseUp"
         >
           <li v-for="(img, idx) in imgs">
-            <h4 @click="index = idx" :class="['window-tab', idx === index ? 'active': null]">
+            <h4 @click="handleMouseUp(idx)" :class="['window-tab', idx === index ? 'active': null]">
               {{ getImgName(img) }}
             </h4>
           </li>

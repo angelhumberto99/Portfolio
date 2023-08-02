@@ -5,15 +5,15 @@
     data() {
       return { 
         show: false,
-        typed: [
-          "public/Typed/1-Layouts_Dark.gif",
-          "public/Typed/2-Layouts_Light.gif",
-          "public/Typed/3-Test_Light.gif",
-          "public/Typed/4-Test_Dark.gif",
-          "public/Typed/5-Analytics-Dark.gif",
-          "public/Typed/6-Analytics-Light.gif",
-          "public/Typed/7-Reset_Dark.gif",
-          "public/Typed/7-Reset_Light.gif"
+        tabs: [
+          "Typed/1-Layouts_Dark.gif",
+          "Typed/2-Layouts_Light.gif",
+          "Typed/3-Test_Light.gif",
+          "Typed/4-Test_Dark.gif",
+          "Typed/5-Analytics-Dark.gif",
+          "Typed/6-Analytics-Light.gif",
+          "Typed/7-Reset_Dark.gif",
+          "Typed/8-Reset_Light.gif"
         ]
       }
     },
@@ -35,7 +35,7 @@
       <!-- <GlassCard :animate="show" showClass="show" hideClass="hide">
         <p>Estos son los proyectos</p>
       </GlassCard> -->
-      <OSWindow title="Typed" :imgs="typed"/>
+      <OSWindow title="Typed" :imgs="tabs"/>
     </section>
   </SnapObservable>
 </template>
