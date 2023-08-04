@@ -7,7 +7,7 @@
       };
     },
     methods: {
-      setIntersectionObserver: function (rootMargin = "-1px") {
+      setIntersectionObserver(rootMargin = "-1px"): void {
         const observableRef = this.$refs.observableRef as HTMLDivElement;
         // Prevent duplicate observers
         if (this.observer !== null || observableRef === null) return;
@@ -36,5 +36,5 @@
 </template>
 
 <style scoped>
-  @import './styles.module.scss';
+  @import "./styles.module.scss";
 </style>

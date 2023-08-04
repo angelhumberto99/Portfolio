@@ -3,7 +3,7 @@
     name: "Header",
     data() {
       return {
-        showMenu: false as Boolean,
+        showMenu: false as boolean,
         xPosition: 0 as number,
         currentWidth: 0 as number,
         currentHeight: 0 as number,
@@ -12,22 +12,24 @@
           "About",
           "Projects",
           "Contact"
-        ]
+        ] as Array<string>,
+        currentPage: "Profile" as string | null
       }
     },
     methods: {
-      toggleMenu: function() {
+      toggleMenu(): void {
         if (this.showMenu === null) {
           this.showMenu = false
           return
         }
         this.showMenu = !this.showMenu
       },
-      hideMenu: function() {
+      hideMenu(): void {
         this.showMenu = false
       },
-      setHover: function({target}: any) {
-        const anchor = target as HTMLAnchorElement
+      setHover(event: MouseEvent): void {
+        const anchor = event.target as HTMLAnchorElement
+        this.currentPage = anchor.getAttribute("name")
         const ul = this.$refs.listRef as HTMLUListElement
         const navbar = this.$refs.navRef as HTMLElement
         const { width, height, x: anchorX } = anchor.getBoundingClientRect();
@@ -39,7 +41,7 @@
       }
     },
     computed: {
-      getHover: function() {
+      getHover(): string {
         return `
           --height-anchor: ${this.currentHeight}px;
           --width-anchor: ${this.currentWidth}px;
@@ -69,7 +71,11 @@
         <li class="hover-anchor" :style="getHover"></li>
         <template v-for="page in pages">
           <li>
-            <a @click="setHover" :href="`#${page}`">{{page}}</a>
+            <a @click="setHover($event)" :name="page"
+              :class="page === currentPage? 'current-page': null" 
+              :href="`#${page}`">
+              {{page}}
+            </a>
           </li>
         </template>
       </ul>

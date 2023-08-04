@@ -1,16 +1,19 @@
 <script lang="ts">
-  import { GlassCard, SnapObservable } from '../Containers';
-  import AnchorCover from '../AnchorCover/AnchorCover.vue';
+  import { SnapObservable } from "../Containers";
+  import AnchorCover from "../AnchorCover/AnchorCover.vue";
   export default {
     name: "Profile",
     data() {
-      return { show: false }
+      return { show: false as boolean }
     },
     methods: {
-      observe: function(value: boolean) { this.show = value }
+      observe(value: boolean): void { 
+        this.show = value
+        if (value)
+          globalThis.location.hash = "#Profile"
+      }
     },
     components: {
-      GlassCard,
       SnapObservable,
       AnchorCover
     }
@@ -32,7 +35,9 @@
         </p>
         <footer class="links-footer">
           <AnchorCover color="#1da1f2" :animate="show" delay=".5s"
-            href="https://www.linkedin.com/in/andr%C3%A9-%C3%A1ngel-humberto-guti%C3%A9rrez-alatorre-014224240/" target="_blank">
+            href="https://www.linkedin.com/in/andr%C3%A9-%C3%A1ngel-humberto-guti%C3%A9rrez-alatorre-014224240/" 
+            target="_blank"
+          >
             <font-awesome-icon :icon="['fab', 'linkedin']" />
           </AnchorCover>
           <AnchorCover color="#6e5dd8" :animate="show" delay="1s"
@@ -43,7 +48,7 @@
       </section>
       <section :class="['image-container', show? 'img-show': 'img-hide']">
         <div class="blob">
-          <img src="../../assets/profile-placeholder.png" alt="profile image"/>
+          <img src="profile-placeholder.png" alt="profile image"/>
         </div>
       </section>
     </section>

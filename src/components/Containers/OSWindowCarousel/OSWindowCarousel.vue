@@ -12,14 +12,14 @@
       }
     },
     methods: {
-      scrollOnGrabbing(evt: MouseEvent) {
+      scrollOnGrabbing(evt: MouseEvent): void {
         // Updates the scroll when the user grabs the tabs and moves it horizontally
         if (!this.grabbing) return
         const tabList = this.$refs.tabList as HTMLUListElement
         const dx = this.clickPosX - evt.x
         tabList.scrollLeft = this.currentScrollX + dx
       },
-      handleMouseDown(evt: MouseEvent) {
+      handleMouseDown(evt: MouseEvent): void {
         // Get current mouse position and scroll progress
         const tabList = this.$refs.tabList as HTMLUListElement
         this.startClick = new Date();
@@ -27,7 +27,7 @@
         this.currentScrollX = tabList.scrollLeft
         this.grabbing = true
       },
-      handleMouseUp(index = -1) {
+      handleMouseUp(index = -1): void {
         // Checks if the user holds the mouse click or simply does a normal click
         const currentTime = new Date()
         this.grabbing = false
@@ -36,27 +36,23 @@
         if (elapsedTime < LONG_CLICK_MS && index >= 0)
           this.index = index
       },
-      handleClose(type: string) {
+      handleClose(type: string): void {
         this.$emit("handleClose", type)
       }
     },
     computed: {
-      getFilePath() {
+      getFilePath(): string {
         const currentImage = this.imgs[this.index];
         return `> ${this.location.replace("/", " > ")} > ${currentImage}`
       },
-      getFile() {
+      getFile(): string {
         const basePath = this.location.replace("public/", "")
         return `${basePath}/${this.imgs[this.index]}`
       }
     },
     watch: {
-      'close'() {
-        this.index = 0
-      },
-      'imgs'() {
-        this.index = 0
-      }
+      close(): void { this.index = 0 },
+      imgs(): void { this.index = 0 }
     }
   }
 </script>

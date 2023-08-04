@@ -1,16 +1,33 @@
+$spacing-bottom: 2rem;
+$shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+0 18px 36px -18px rgba(0, 0, 0, 0.3),
+0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+
 .timestamp {
   display: flex;
-  margin: 2rem auto;
+  margin: $spacing-bottom auto;
   max-width: 800px;
   align-items: center;
-  button {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    margin-right: 3rem;
-    cursor: pointer;
+  transition: translate 1s ease;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+  .timeline-button {
+    margin-left: 3rem;
+    margin-right: 0;
+    
+    &::before {
+      left: 0;
+      translate: -100% -50%;
+    }
   }
-  transition: translate 0.5s ease;
+}
+
+.last {
+  .timeline-button::after {
+    height: 0;
+  }
 }
 
 .disapair {
@@ -21,44 +38,124 @@
   translate: -100%;
 }
 
-.reversed {
-  flex-direction: row-reverse;
-  button {
-    margin-left: 3rem;
-    margin-right: 0;
+.show {
+  transition: opacity 1s, translate 1s ease;
+  transition-delay: var(--delay);
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  translate: 0 100%;
+}
+
+@mixin button-lines {
+  transition: width 0.3s ease, height 0.3s ease;
+  content: "";
+  position: absolute;
+  background-color: var(--light-color);
+  z-index: -1;
+}
+
+.timeline-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 75px;
+  min-height: 75px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: border-radius 0.3s ease-in-out, opacity 0.1s ease-in-out;
+  box-shadow: $shadow;
+  outline: 1px solid var(--dark-color);
+  margin-right: 3rem;
+  cursor: pointer;
+  border: none;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-weight: bold;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    @include button-lines();
+    width: 0;
+    height: 2px;
+    top: 50%;
+    right: 0;
+    translate: 100% -50%;
   }
+
+  &::after {
+    @include button-lines();
+    width: 2px;
+    height: 0;
+    top: 100%;
+    left: 50%;
+  }
+
+  &:hover {
+    border-radius: 20px;
+    outline: 3px solid var(--dark-color);
+  }
+
+  &:focus {
+    opacity: 50%;
+  }
+}
+
+.line-show {
+  &::before {
+    transition-delay: .9s;
+    width: 3rem;
+  }
+
+  &::after {
+    transition-delay: .9s;
+    height: calc(var(--card-height) / 2);
+  }
+}
+
+.text {
+  transition: width .5s ease;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .timeline-card {
   display: flex;
+  z-index: 1;
   flex: 1;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-  0 18px 36px -18px rgba(0, 0, 0, 0.3),
-  0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  box-shadow: $shadow;
 }
 
 .date {
-  background-color: orange;
+  background-color: var(--dark-color);
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--light-color);
+  text-shadow: #f6f9fc 0px 0px 0px;
 }
 
 .data {
   background-color: white;
   padding: 1.5rem 1rem;
   flex: 2;
+
   h3 {
     margin: 0;
+    color: var(--dark-color);
   }
 }
 
 .description {
   margin: .5rem 0;
-  
 }
 
 .badges {
@@ -74,4 +171,96 @@
   box-shadow: 
     3px 3px 5px rgba(0, 0, 0, 0.2),
     -3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (width < 768px) {
+  .timestamp {
+    box-shadow: $shadow;
+    position: relative;
+    flex-direction: column-reverse;
+    max-width: 500px;
+    z-index: 1;
+    border-radius: 8px;
+    
+    &::after {
+      @include button-lines();
+      top: 100%;
+      transition-delay: 1s;
+      height: $spacing-bottom;
+      width: 2px;
+    }
+  }
+
+  .last {
+    &::after {
+      height: 0;
+    }
+  }
+
+  .disapair {
+    &::after {
+      transition-delay: 0s;
+      height: 0;
+    }
+  }
+
+  .disapair-reversed {
+    &::after {
+      transition-delay: 0s;
+      height: 0;
+    }
+  }
+
+  .timeline-button {
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    margin: 0 !important;
+    aspect-ratio: 0;
+    outline: none;
+    border: 2px solid var(--dark-color);
+    transition: none;
+
+    &::before {
+      transition: none;
+      width: 0;
+    }
+
+    &::after {
+      transition: none;
+      height: 0;
+    }
+
+    &:hover {
+      border-radius: 0 0 8px 8px;
+      outline: none;
+      border: 3px solid var(--dark-color);
+      .text {
+        width: 10ch;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .line-show {
+    &::before {
+      width: 0;
+    }
+
+    &::after {
+      height: 0;
+    }
+  }
+
+  .timeline-card {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    box-shadow: none;
+  }
+}
+
+@media (width < 500px) {
+  .timestamp {
+    margin: 2rem;
+  }
 }

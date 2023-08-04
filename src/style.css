@@ -19,7 +19,7 @@ body, html {
 #app {
   height: 100vh;
   overflow: hidden scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory ;
 }
 
 

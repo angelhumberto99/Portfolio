@@ -1,18 +1,19 @@
 {
   "Assist": {
-    "date": "2022",
+    "date": "June 22 2022",
     "imgs": [
       "1-Dashboard.jpg",
       "2-Ticket-System.jpg",
       "3-Widget.jpg"
     ],
     "description": "Chat application",
-    "tecnologies": [
+    "technologies": [
       "React.js", "Socket.io", "Docker", "Docker-Compose", "Laravel", "RASA", "Python"
-    ]
+    ],
+    "color": "#555ac0"
   },
   "Typed": {
-    "date": "2023",
+    "date": "February 4 2023",
     "imgs": [
       "1-Layouts_Dark.gif",
       "2-Layouts_Light.gif",
@@ -24,10 +25,11 @@
       "8-Reset_Light.gif"
     ],
     "description": "Minigame for a speed typing challenge",
-    "tecnologies": ["React.js", "Typescript"]
+    "technologies": ["React.js", "Typescript"],
+    "color": "#ffa500"
   },
   "This Cord": {
-    "date": "2022",
+    "date": "June 30 2022",
     "imgs": [
       "1-Login.gif",
       "2-Send_Message.gif",
@@ -36,30 +38,42 @@
       "5-Join_Server.gif"
     ],
     "description": "Concurrent chat application, based on the most popular voice chatting app 'Discord'",
-    "tecnologies": ["React.js", "Socket.io", "Docker", "Docker-Compose", "Node.js"]
+    "technologies": ["React.js", "Socket.io", "Docker", "Docker-Compose", "Node.js"],
+    "color": "#9051aa"
   },
   "Instantgrams": {
-    "date": "2023",
+    "date": "April 4 2023",
     "imgs": [],
     "description": "Application that shows the main page of instagram",
-    "tecnologies": ["Angular", "Spring-Boot"]
+    "technologies": ["Angular", "Spring-Boot"],
+    "color": "#24b47e"
   },
   "3D Projection": {
-    "date": "2022",
+    "date": "February 10 2022",
     "imgs": [],
     "description": "Simple 3D renderer that shows 3D meshes on screen",
-    "tecnologies": ["Python", "Pygame", "Numpy", "Pandas"]
+    "technologies": ["Python", "Pygame", "Numpy", "Pandas"],
+    "color": "#e05564"
   },
   "React Native Shop": {
-    "date": "2021",
+    "date": "November 3 2021",
     "imgs": [],
     "description": "Ecommerce mobile application simulator",
-    "tecnologies": ["React Native", "Node.js"]
+    "technologies": ["React Native", "Node.js"],
+    "color": "#ba9154"
   },
   "React Native Calculator": {
-    "date": "2021",
+    "date": "August 18 2021",
     "imgs": [],
     "description": "Simple calculator for mobile devices",
-    "tecnologies": ["React Native"]
+    "technologies": ["React Native"],
+    "color": "#3a9e87"
+  },
+  "Theam": {
+    "date": "November 18 2020",
+    "imgs": [],
+    "description": "School manager system for students and educators",
+    "technologies": ["React.js", "Python", "Flask"],
+    "color": "#d1c62a"
   }
 }
