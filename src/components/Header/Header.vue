@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { mapState, mapMutations } from 'vuex';
+
   export default {
     name: "Header",
     data() {
@@ -13,10 +15,10 @@
           "Projects",
           "Contact"
         ] as Array<string>,
-        currentPage: "Profile" as string | null
       }
     },
     methods: {
+      ...mapMutations(['setCurrentPage']),
       toggleMenu(): void {
         if (this.showMenu === null) {
           this.showMenu = false
@@ -27,18 +29,23 @@
       hideMenu(): void {
         this.showMenu = false
       },
-      setHover(event: MouseEvent): void {
-        const anchor = event.target as HTMLAnchorElement
-        this.currentPage = anchor.getAttribute("name")
+      setHover(): void {
+        const anchors = this.$refs.page as Array<HTMLAnchorElement>
+        const currentAnchor = anchors.find(e => e.innerText === this.currentPage)
+        if (!currentAnchor) return
         const ul = this.$refs.listRef as HTMLUListElement
         const navbar = this.$refs.navRef as HTMLElement
-        const { width, height, x: anchorX } = anchor.getBoundingClientRect();
+        const { width, height, x: anchorX } = currentAnchor.getBoundingClientRect();
         const { x: listX } = ul.getBoundingClientRect();
         if (navbar.getBoundingClientRect().width < 768) return
         this.currentWidth = width;
         this.currentHeight = height;
         this.xPosition = anchorX - listX;
-      }
+      },
+      setCurrentPageEvent(event: MouseEvent): void {
+        const anchor = event.target as HTMLAnchorElement
+        this.setCurrentPage(anchor.innerText)
+      },
     },
     computed: {
       getHover(): string {
@@ -47,7 +54,16 @@
           --width-anchor: ${this.currentWidth}px;
           --x-position: ${this.xPosition}px;
         `;
-      }
+      },
+      ...mapState(['currentPage'])
+    },
+    mounted() {
+      const { hash } = globalThis.location
+      this.setCurrentPage(hash.replace("#", ""))
+      this.setHover()
+    },
+    watch: {
+      currentPage() { this.setHover() }
     }
   }
 </script>
@@ -71,8 +87,8 @@
         <li class="hover-anchor" :style="getHover"></li>
         <template v-for="page in pages">
           <li>
-            <a @click="setHover($event)" :name="page"
-              :class="page === currentPage? 'current-page': null" 
+            <a @click="setCurrentPageEvent($event)"
+              ref="page"
               :href="`#${page}`">
               {{page}}
             </a>

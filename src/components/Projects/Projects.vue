@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { mapMutations } from 'vuex';
   import { SnapObservable, OSWindowCarousel, TimelineCard } from "../Containers";
   import PROJECTS from "../../assets/projects.json";
   
@@ -25,10 +26,10 @@
       }
     },
     methods: {
+      ...mapMutations(['setCurrentPage']),
       observe(value: boolean): void { 
         this.show = value
-        if (value)
-          globalThis.location.hash = "#Projects"
+        if (value) this.setCurrentPage('Projects')
       },
       handleClick(name: string): void {
         if (name !== this.location) {

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { mapMutations } from 'vuex';
   import { SnapObservable } from "../Containers";
   export default {
     name: "About",
@@ -6,10 +7,10 @@
       return { show: false as boolean }      
     },
     methods: {
+      ...mapMutations(['setCurrentPage']),
       observe(value: boolean): void { 
         this.show = value
-        if (value)
-          globalThis.location.hash = "#About"
+        if (value) this.setCurrentPage('About')
       }
     },
     components: {

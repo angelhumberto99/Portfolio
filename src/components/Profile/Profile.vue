@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { mapMutations } from 'vuex';
   import { SnapObservable } from "../Containers";
   import AnchorCover from "../AnchorCover/AnchorCover.vue";
   export default {
@@ -7,10 +8,10 @@
       return { show: false as boolean }
     },
     methods: {
+      ...mapMutations(['setCurrentPage']),
       observe(value: boolean): void { 
         this.show = value
-        if (value)
-          globalThis.location.hash = "#Profile"
+        if (value) this.setCurrentPage('Profile')
       }
     },
     components: {
@@ -48,7 +49,7 @@
       </section>
       <section :class="['image-container', show? 'img-show': 'img-hide']">
         <div class="blob">
-          <img src="profile-placeholder.png" alt="profile image"/>
+          <img src="../../assets/profile-placeholder.png" alt="profile image"/>
         </div>
       </section>
     </section>
