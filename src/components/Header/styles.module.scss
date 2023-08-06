@@ -4,6 +4,7 @@ header {
   z-index: 2;
   top: 0;
 }
+
 h1 {
   margin: 0;
   padding: 0;
@@ -11,10 +12,12 @@ h1 {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
+
   &:hover {
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
   }
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -74,16 +77,13 @@ a {
   width: var(--width-anchor);
   height: var(--height-anchor);
   background-color: rgba(0, 0, 0, .5);
-  top: 2px;
+  top: calc(2px + var(--y-position));
   left: var(--x-position);
   z-index: -1;
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
-@media (width < 768px) {
-  .hover-anchor {
-    visibility: hidden;
-  }
+@media screen and (max-width: 768px) {
   .menu {
     flex-direction: column;
     position: fixed;
@@ -94,39 +94,54 @@ a {
     box-shadow: 3px 0 3px rgba(0, 0, 0, 0.3);
     padding-top: 5rem;
     gap: .5rem;
-    li {
-      padding: 0 .5rem;
 
+    li {
+      margin: 0 .5rem;
       display: inline-flex;
     }
+
     a {
+      font-weight: 500;
       width: 100%;
       border-radius: 5px;
       padding: 0 1rem;
       color: #212121;
       transition: color .3s ease, background-color .3s ease;
-      
       &:hover {
         color: white;
-        font-weight: 500;
-        background-color: #6e5dd8;
+        background-color: rgba(109, 93, 216, 0.5)
       }
     }
     translate: -102%;
     transition: translate .3s ease;
   }
+
+  .hover-anchor {
+    background-color: #6e5dd8;
+    left: 0;
+    top: var(--y-position);
+    transition: unset;
+    transition: top 0.3s ease-in-out; 
+  }
+
+  .active {
+    color: white !important;
+  }
+
   .showMenu {
     translate: 0;
   }
+
   .desktop {
     display: none;
   }
+
   .mobile {
     display: block;
   }
 }
 
-@media (height < 768px) {
+@media screen and (max-height: 768px) {
   nav {
     padding: .5rem 1rem;
   }
