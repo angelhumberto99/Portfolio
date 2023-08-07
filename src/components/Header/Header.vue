@@ -1,32 +1,21 @@
 <script lang='ts'>
   import { mapState, mapMutations } from 'vuex';
+  import pages from '../../assets/pages.json';
+  import { Page } from '../../types';
 
   export default {
     name: 'Header',
     data() {
       return {
-        showMenu: true as boolean,
+        showMenu: false as boolean,
         xPosition: 0 as number,
-        yPosition: 10 as number,
+        yPosition: 0 as number,
         currentWidth: 0 as number,
         currentHeight: 0 as number,
         headerHeight: 0 as number,
         windowWidth: 0 as number,
-        pages: [
-          {
-            name: 'Profile',
-            icon: 'user'
-          }, {
-            name: 'About',
-            icon: 'user'
-          }, {
-            name: 'Projects',
-            icon: 'user'
-          }, {
-            name: 'Contact',
-            icon: 'user'
-          }
-        ],
+        windowHeight: 0 as number,
+        pages: pages as Array<Page>,
         anchors: null as null | Array<HTMLAnchorElement>
       }
     },
@@ -39,47 +28,50 @@
         }
         this.showMenu = !this.showMenu;
       },
-      hideMenu(): void { this.showMenu = false },
-      setHover(): void {
-        if (!this.anchors) return
-        const currentAnchor =  this.anchors.find(e => e.innerText === this.currentPage);
+      hideMenu(): void { this.showMenu = false; },
+      getCurrentAnchor(): HTMLAnchorElement | undefined {
+        return this.anchors?.find(e => e.innerText.includes(this.currentPage));
+      },
+      setHeaderHeight(): void {
+        const navbar = this.$refs.navRef as HTMLElement;
+        const { height } = navbar.getBoundingClientRect();
+        this.headerHeight = height;
+      },
+      calcHover(): void {
+        const currentAnchor = this.getCurrentAnchor();
         if (!currentAnchor) return;
 
         const ul = this.$refs.listRef as HTMLUListElement;
-        const navbar = this.$refs.navRef as HTMLElement;
-        const {
-          width:anchorWidth,
-          height: anchorHeight,
-          x: anchorX,
-          y: anchorY 
-        } = currentAnchor.getBoundingClientRect();
+        const { width, height, x: anchorX, y: anchorY } = currentAnchor.getBoundingClientRect();
+        const { x: listX, y: listY } = ul.getBoundingClientRect();
 
-        const {
-          x: listX,
-          y: listY
-        } = ul.getBoundingClientRect();
-
-        const {
-          height: headerHeight
-        } = navbar.getBoundingClientRect();
-
-        this.currentWidth = anchorWidth;
-        this.currentHeight = anchorHeight;
+        this.currentWidth = width;
+        this.currentHeight = height;
         this.xPosition = anchorX - listX;
         this.yPosition = anchorY - listY;
-        this.headerHeight = headerHeight;
+      },
+      setHover(): void {
+        this.calcHover();
+        this.setHeaderHeight();
 
-        if (this.windowWidth < 768)
+        if (this.windowWidth < this.$options.MOBILE_MAX_WIDTH)
           this.xPosition = 0;
         else
           this.yPosition = 0;
       },
       setCurrentPageEvent(event: MouseEvent): void {
-        const anchor = event.target as HTMLAnchorElement
-        this.setCurrentPage(anchor.innerText)
+        const anchor = event.target as HTMLAnchorElement;
+        this.setCurrentPage(anchor.innerText);
       },
       onResize(): void {
         this.windowWidth = globalThis.innerWidth;
+        this.windowHeight = globalThis.innerHeight;
+      },
+      getIcon(page: Page): [string, string] {
+        const active = page.name === this.currentPage;
+        const { icon } = page;
+        const [ outline, regular ] = icon.types;
+        return [active ? regular: outline, icon.name];
       }
     },
     computed: {
@@ -100,13 +92,14 @@
       this.anchors = this.$refs.page as Array<HTMLAnchorElement>;
       this.$nextTick(() => {
         globalThis.addEventListener('resize', this.onResize);
-      })
+      });
       this.onResize();
-      this.setHover();
+      this.$options.MOBILE_MAX_WIDTH = 768;
     },
     watch: {
-      currentPage() { this.setHover(); },
-      windowWidth() { this.setHover(); }
+      currentPage() :void { this.setHover(); },
+      windowWidth() :void { this.setHover(); },
+      windowHeight() :void { this.setHover(); }
     }
   }
 </script>
@@ -135,8 +128,8 @@
               :class="page.name === currentPage? 'active': null"
               :href="`#${page.name}`">
               <span>
-                <!-- <font-awesome-icon v-if="windowWidth < 768"
-                :icon="[page.name === currentPage ? 'fas': 'far', page.icon]" /> -->
+                <font-awesome-icon v-if="windowWidth < $options.MOBILE_MAX_WIDTH"
+                :icon="[...getIcon(page)]" />
                 {{page.name}}
               </span>
             </a>

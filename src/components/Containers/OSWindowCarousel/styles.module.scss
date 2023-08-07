@@ -1,11 +1,7 @@
 .window-frame {
   background-color: #212121;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
   border-radius: 5px;
   padding: .3rem;
-  overflow: hidden;
   transition: scale 0.3s;
 }
 
@@ -103,4 +99,10 @@
 
 .close {
   scale: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header-bottom {
+    display: none;
+  }
 }

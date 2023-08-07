@@ -1,16 +1,16 @@
-<script lang="ts">
+<script lang='ts'>
   import { mapMutations } from 'vuex';
-  import { SnapObservable } from "../Containers";
+  import { SnapObservable } from '../Containers';
   export default {
-    name: "About",
+    name: 'About',
     data() {
       return { show: false as boolean }      
     },
     methods: {
       ...mapMutations(['setCurrentPage']),
       observe(value: boolean): void { 
-        this.show = value
-        if (value) this.setCurrentPage('About')
+        this.show = value;
+        if (value) this.setCurrentPage('About');
       }
     },
     components: {
@@ -29,5 +29,5 @@
 </template>
 
 <style scoped>
-  @import "./styles.module.scss";
+  @import './styles.module.scss';
 </style>

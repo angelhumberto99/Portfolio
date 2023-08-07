@@ -1,21 +1,21 @@
-<script lang="ts">
+<script lang='ts'>
   export default {
-    name: "SnapObservable",
+    name: 'SnapObservable',
     data() {
       return {
         observer: null as IntersectionObserver | null
       };
     },
     methods: {
-      setIntersectionObserver(rootMargin = "-1px"): void {
+      setIntersectionObserver(rootMargin = '-1px'): void {
         const observableRef = this.$refs.observableRef as HTMLDivElement;
         // Prevent duplicate observers
         if (this.observer !== null || observableRef === null) return;
 
         // Emit everytime this component shows on screen
         this.observer = new IntersectionObserver((entries) => {
-          this.$emit("observable", entries[0].isIntersecting);
-        }, { rootMargin })
+          this.$emit('observable', entries[0].isIntersecting);
+        }, { rootMargin });
         this.observer.observe(observableRef);
       }
     },
@@ -36,5 +36,5 @@
 </template>
 
 <style scoped>
-  @import "./styles.module.scss";
+  @import './styles.module.scss';
 </style>

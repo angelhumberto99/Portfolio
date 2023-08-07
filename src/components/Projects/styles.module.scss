@@ -17,27 +17,6 @@
   height: 100vh;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  p {
-    color: white;
-  }
-}
-
-.close {
-  z-index: 3;
-  visibility: visible;
-}
-
 @media screen and (max-height: 768px) {
   .content {
     padding-top: 2.5rem;

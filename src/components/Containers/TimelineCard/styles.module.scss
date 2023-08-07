@@ -161,16 +161,8 @@ $shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
 .badges {
   display: flex;
   flex-wrap: wrap;
-  gap: .2rem;
-}
-
-.badge {
-  border-radius: 20px;
-  padding: 0 .5rem;
-  background-color: white;
-  box-shadow: 
-    3px 3px 5px rgba(0, 0, 0, 0.2),
-    -3px 3px 5px rgba(0, 0, 0, 0.2);
+  gap: .5rem;
+  padding-top: .5rem;
 }
 
 @media screen and (max-width: 768px) {

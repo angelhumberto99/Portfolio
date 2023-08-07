@@ -1,9 +1,9 @@
-<script lang="ts">
+<script lang='ts'>
   import { mapMutations } from 'vuex';
-  import { SnapObservable } from "../Containers";
-  import AnchorCover from "../AnchorCover/AnchorCover.vue";
+  import { SnapObservable } from '../Containers';
+  import AnchorCover from '../AnchorCover/AnchorCover.vue';
   export default {
-    name: "Profile",
+    name: 'Profile',
     data() {
       return { show: false as boolean }
     },
@@ -57,5 +57,5 @@
 </template>
 
 <style scoped>
-  @import "./styles.module.scss";
+  @import './styles.module.scss';
 </style>

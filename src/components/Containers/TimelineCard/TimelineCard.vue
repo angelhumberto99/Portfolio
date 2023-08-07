@@ -1,52 +1,67 @@
-<script lang="ts">
-  import { hexToRGB } from "../../../utils/hexToRGB.ts"
+<script lang='ts'>
+  import { hexToRGB } from '../../../utils/hexToRGB.ts';
+  import ListOfBadges from '../../ListOfBadges/ListOfBadges.vue';
   export default {
-    name: "TimelineCard",
-    props: ["reversed", "data", "last", "close", "show", "delay"],
+    name: 'TimelineCard',
+    props: ['reversed', 'data', 'last', 'close', 'show', 'delay'],
     data() {
-      return {
-        disapair: false as boolean,
-        cardHeight: 0 as number
-      }
+        return {
+            disapair: false as boolean,
+            cardHeight: 0 as number
+        };
     },
     methods: {
-      handleClick(): void {
-        this.disapair = !this.disapair
-        this.$emit("handleClick", this.data.title)
-      }
+        handleClick(): void {
+            this.disapair = !this.disapair;
+            this.$emit('handleClick', this.data, this.getColorScheme);
+        }
     },
     computed: {
-      getDisapairDirection(): string | boolean {
-        if (!this.disapair) return false
-        return this.reversed? "disapair-reversed" : "disapair";
-      },
-      getColor(): string {
-        return hexToRGB(this.data.color)
-      }
+        getDisapairDirection(): string | boolean {
+            if (!this.disapair)
+                return false;
+            return this.reversed ? 'disapair-reversed' : 'disapair';
+        },
+        getColor(): string {
+            return hexToRGB(this.data.color);
+        },
+        getLineShow(): string | null {
+            return this.disapair || !this.show ? null : 'line-show';
+        },
+        showDelayed(): string {
+            return this.show ? 'show' : 'hidden';
+        },
+        getColorScheme(): string {
+            return `
+          --dark-color: rgb(${this.getColor});
+          --light-color: rgba(${this.getColor}, 0.5);
+          --delay: 0.${this.delay}s;
+        `;
+        },
+        getCardHeight(): string {
+            return `--card-height: ${this.cardHeight}px`;
+        }
     },
     mounted() {
-      const card = this.$refs.cardHeight as HTMLDivElement
-      const { height } = card.getBoundingClientRect()
-      this.cardHeight = height
+        const card = this.$refs.cardHeight as HTMLDivElement;
+        const { height } = card.getBoundingClientRect();
+        this.cardHeight = height;
     },
     watch: {
-      close(): void { this.disapair = !this.close }
-    }
-  }
+        close(): void { this.disapair = !this.close; }
+    },
+    components: { ListOfBadges }
+}
 </script>
 
 <template>
   <div ref="cardHeight" 
-    :class="['timestamp', {reversed, last}, getDisapairDirection, show? 'show': 'hidden']"
-    :style="`
-      --dark-color: rgb(${getColor});
-      --light-color: rgba(${getColor}, 0.5);
-      --delay: 0.${delay}s;
-    `"
+    :class="['timestamp', {reversed, last}, getDisapairDirection, showDelayed]"
+    :style="getColorScheme"
   >
-    <button :class="['timeline-button', disapair ? null: 'line-show']" 
+    <button :class="['timeline-button', getLineShow]" 
       @click="handleClick"
-      :style="`--card-height: ${cardHeight}px`"
+      :style="getCardHeight"
     >
       <div class="text">Learn More</div>
       <font-awesome-icon :icon="['fas', 'code']" />
@@ -61,15 +76,13 @@
         </header>
         <p class="description">{{ data.description }}</p>
         <footer class="badges">
-          <span class="badge" v-for="badge in data.technologies">
-            {{ badge }}
-          </span>
+          <ListOfBadges :badges="data.technologies"/>
         </footer>
       </section>
     </div>
   </div>
 </template>
 
-<style scopd>
-  @import "./styles.module.scss";
+<style scoped>
+  @import './styles.module.scss';
 </style>

@@ -1,74 +1,57 @@
-<script lang="ts">
+<script lang='ts'>
   import { mapMutations } from 'vuex';
-  import { SnapObservable, OSWindowCarousel, TimelineCard } from "../Containers";
-  import PROJECTS from "../../assets/projects.json";
-  
-  interface ProjectWithoutImgs {
-    title?: string;
-    date: string;
-    description: string;
-    technologies: Array<string>;
-    color: string;
-  }
-
-  interface Project extends ProjectWithoutImgs {
-    imgs: Array<string>;
-  }
+  import { SnapObservable, OSWindowCarousel, TimelineCard, Overlay } from '../Containers';
+  import PROJECTS from '../../assets/projects.json';
+  import { ProjectWithoutImgs, Project } from '../../types';
+  import ListOfBadges from '../ListOfBadges/ListOfBadges.vue';
 
   export default {
-    name: "Projects",
+    name: 'Projects',
     data() {
       return { 
         show: false as boolean,
         close: true as boolean,
         projects: [] as Array<[string, Project]>,
-        location: "Typed" as string
+        location: 'Typed' as string,
+        overlayProject: null as null | ProjectWithoutImgs,
+        colors: '' as string
       }
     },
     methods: {
       ...mapMutations(['setCurrentPage']),
       observe(value: boolean): void { 
-        this.show = value
-        if (value) this.setCurrentPage('Projects')
+        this.show = value;
+        if (value) this.setCurrentPage('Projects');
       },
-      handleClick(name: string): void {
-        if (name !== this.location) {
-          this.location = name
-          this.close = false 
+      handleClick(data: ProjectWithoutImgs, colors: string): void {
+        this.overlayProject = data;
+        this.colors = colors;
+        if (data.title !== this.location) {
+          this.location = data.title ?? "Typed";
+          this.close = false ;
         } else
-          this.close = !this.close
+          this.close = !this.close;
       },
-      handleClose(type: string): void {
-        // TODO: handle every action button in the OSWindowCarousel
-        console.log({type})
-        this.close = true
-      },
+      handleClose(): void { this.close = true; },
       getProjectData(key: string, value: Project): ProjectWithoutImgs {
-        const { imgs: _,...rest } = value as Project
-        return { title: key, ...rest }
-      }
-    },
-    computed: {
-      getProjectImages(): Array<string> {
-        if (this.projects.length === 0) return []
-        const [, project] = this.projects.find(([name])  => {
-          return name === this.location
-        }) as [string, Project]
-        return project.imgs
+        const { imgs: _,...rest } = value as Project;
+        return { title: key, ...rest };
       }
     },
     mounted() {
-      const orderedProjects = Object.entries(PROJECTS)
+      const orderedProjects = Object.entries(PROJECTS);
       this.projects = orderedProjects.sort((a, b) => {
-        let res = new Date(a[1].date).getTime() < new Date(b[1].date).getTime()
-        return res ? 1 : -1
-      })
+        let res = new Date(a[1].date).getTime() < new Date(b[1].date).getTime();
+        return res ? 1 : -1;
+      });
     },
     components: {
-      SnapObservable,
-      OSWindowCarousel,
-      TimelineCard
-    }
+    SnapObservable,
+    OSWindowCarousel,
+    TimelineCard,
+    Overlay,
+    ListOfBadges
+}
   }
 </script>
 
@@ -88,21 +71,19 @@
         </template>
         <div style="height: 2rem;"></div>
       </section>
-      <div @click="handleClose('overlay')" 
-        :class="['overlay', {close: !close}]"
-      >
-        <OSWindowCarousel @click.stop
-        :location="`public/${location}`" 
-        :imgs="getProjectImages" 
+      <Overlay 
+        @handleClose="handleClose" 
         :close="close"
-        @handleClose="handleClose"
-        />
-        <p> texto relacionado con el overlay</p>
-      </div>
+        :style="colors"
+        :data="overlayProject"
+        :location="location"
+        :projects="projects"
+      >
+      </Overlay>
     </section>
   </SnapObservable>
 </template>
 
 <style scoped>
-  @import "./styles.module.scss";
+  @import './styles.module.scss';
 </style>

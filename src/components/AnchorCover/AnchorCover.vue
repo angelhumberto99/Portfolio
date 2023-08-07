@@ -1,22 +1,28 @@
-<script lang="ts">
-  import { hexToRGB } from "../../utils/hexToRGB.ts";
+<script lang='ts'>
+  import { hexToRGB } from '../../utils/hexToRGB.ts';
   export default {
-    name: "AnchorCover",
-    props: ["color", "animate", "delay"],
+    name: 'AnchorCover',
+    props: ['color', 'animate', 'delay'],
     computed: {
-      rgbColor() { return hexToRGB(this.color) }
+      rgbColor(): string { return hexToRGB(this.color); },
+      getHoverBackground(): string {
+        return `--color: ${this.rgbColor}; --delay: ${this.delay};`
+      },
+      getAnimation(): string {
+        return this.animate? 'show-me': 'hide-me';
+      }
     }
   }
 </script>
 
 <template>
-  <a :class="['circular-anchor', animate? 'show-me': 'hide-me']"
-    :style="`--color: ${rgbColor}; --delay: ${delay};`"
+  <a :class="['circular-anchor', getAnimation]"
+    :style="getHoverBackground"
   >
     <slot/>
   </a>
 </template>
 
 <style scoped>
-  @import "./styles.module.scss";
+  @import './styles.module.scss';
 </style>

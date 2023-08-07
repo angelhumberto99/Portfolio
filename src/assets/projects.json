@@ -7,6 +7,7 @@
       "3-Widget.jpg"
     ],
     "description": "Chat application",
+    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": [
       "React.js", "Socket.io", "Docker", "Docker-Compose", "Laravel", "RASA", "Python"
     ],
@@ -25,6 +26,7 @@
       "8-Reset_Light.gif"
     ],
     "description": "Minigame for a speed typing challenge",
+    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React.js", "Typescript"],
     "color": "#ffa500"
   },
@@ -38,6 +40,7 @@
       "5-Join_Server.gif"
     ],
     "description": "Concurrent chat application, based on the most popular voice chatting app 'Discord'",
+    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React.js", "Socket.io", "Docker", "Docker-Compose", "Node.js"],
     "color": "#9051aa"
   },
@@ -45,6 +48,7 @@
     "date": "April 4 2023",
     "imgs": [],
     "description": "Application that shows the main page of instagram",
+    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["Angular", "Spring-Boot"],
     "color": "#24b47e"
   },
@@ -52,6 +56,7 @@
     "date": "February 10 2022",
     "imgs": [],
     "description": "Simple 3D renderer that shows 3D meshes on screen",
+    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["Python", "Pygame", "Numpy", "Pandas"],
     "color": "#e05564"
   },
@@ -59,6 +64,7 @@
     "date": "November 3 2021",
     "imgs": [],
     "description": "Ecommerce mobile application simulator",
+    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React Native", "Node.js"],
     "color": "#ba9154"
   },
@@ -66,6 +72,7 @@
     "date": "August 18 2021",
     "imgs": [],
     "description": "Simple calculator for mobile devices",
+    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React Native"],
     "color": "#3a9e87"
   },
@@ -73,6 +80,7 @@
     "date": "November 18 2020",
     "imgs": [],
     "description": "School manager system for students and educators",
+    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React.js", "Python", "Flask"],
     "color": "#d1c62a"
   }

@@ -92,7 +92,7 @@ a {
     background-color: white;
     z-index: -1;
     box-shadow: 3px 0 3px rgba(0, 0, 0, 0.3);
-    padding-top: 5rem;
+    padding-top: calc(.5rem + var(--header-height));
     gap: .5rem;
 
     li {

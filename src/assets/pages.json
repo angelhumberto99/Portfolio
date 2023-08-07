@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Profile",
+    "icon": {
+      "name": "user",
+      "types": ["far", "fas"]
+    }
+  }, {
+    "name": "About",
+    "icon": {
+      "name": "circle-info",
+      "types": ["fas", "fas"]
+    }
+  }, {
+    "name": "Projects",
+    "icon": {
+      "name": "code",
+      "types": ["fas", "fas"]
+    }
+  }, {
+    "name": "Contact",
+    "icon": {
+      "name": "envelope",
+      "types": ["far", "fas"]
+    }
+  }
+]

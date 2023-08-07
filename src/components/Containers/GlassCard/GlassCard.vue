@@ -1,16 +1,21 @@
-<script lang="ts">
+<script lang='ts'>
   export default {
-    name: "GlassCard",
-    props: ["animate", "showClass", "hideClass"]
+    name:'GlassCard',
+    props: ['animate', 'showClass', 'hideClass'],
+    computed: {
+      getAnimation(): string {
+        return this.animate ? this.showClass: this.hideClass
+      }
+    }
   }
 </script>
 
 <template>
-  <section :class="['card', animate ? showClass: hideClass]">
+  <section :class="['card', getAnimation]">
     <slot/>
   </section>
 </template>
 
 <style scoped>
-  @import "./style.module.scss";
+  @import './style.module.scss';
 </style>
