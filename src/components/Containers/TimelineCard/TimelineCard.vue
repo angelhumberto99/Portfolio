@@ -5,42 +5,46 @@
     name: 'TimelineCard',
     props: ['reversed', 'data', 'last', 'close', 'show', 'delay'],
     data() {
-        return {
-            disapair: false as boolean,
-            cardHeight: 0 as number
-        };
+      return {
+          disapair: false as boolean,
+          cardHeight: 0 as number
+      };
     },
     methods: {
-        handleClick(): void {
-            this.disapair = !this.disapair;
-            this.$emit('handleClick', this.data, this.getColorScheme);
-        }
+      handleClick(): void {
+          this.disapair = !this.disapair;
+          this.$emit('handleClick', this.data, this.getColorScheme);
+      }
     },
     computed: {
-        getDisapairDirection(): string | boolean {
-            if (!this.disapair)
-                return false;
-            return this.reversed ? 'disapair-reversed' : 'disapair';
-        },
-        getColor(): string {
-            return hexToRGB(this.data.color);
-        },
-        getLineShow(): string | null {
-            return this.disapair || !this.show ? null : 'line-show';
-        },
-        showDelayed(): string {
-            return this.show ? 'show' : 'hidden';
-        },
-        getColorScheme(): string {
-            return `
-          --dark-color: rgb(${this.getColor});
-          --light-color: rgba(${this.getColor}, 0.5);
-          --delay: 0.${this.delay}s;
-        `;
-        },
-        getCardHeight(): string {
-            return `--card-height: ${this.cardHeight}px`;
-        }
+      getDisapairDirection(): string | boolean {
+          if (!this.disapair)
+              return false;
+          return this.reversed ? 'disapair-reversed' : 'disapair';
+      },
+      getColor(): string {
+          return hexToRGB(this.data.color);
+      },
+      getLineShow(): string | null {
+          return this.disapair || !this.show ? null : 'line-show';
+      },
+      showDelayed(): string {
+          return this.show ? 'show' : 'hidden';
+      },
+      getColorScheme(): string {
+          return `
+        --dark-color: rgb(${this.getColor});
+        --light-color: rgba(${this.getColor}, 0.5);
+        --delay: 0.${this.delay}s;
+      `;
+      },
+      getCardHeight(): string {
+          return `--card-height: ${this.cardHeight}px`;
+      },
+      formatDate(): string {
+        const date = new Date(this.data.date)
+        return date.toLocaleString('en', { month: 'long', year: 'numeric' })
+      }
     },
     mounted() {
         const card = this.$refs.cardHeight as HTMLDivElement;
@@ -68,7 +72,7 @@
     </button>
     <div :class="['timeline-card', {reversed}]" >
       <section class="date">
-        <h2>{{ data.date }}</h2>
+        <h2>{{ formatDate }}</h2>
       </section>
       <section class="data">
         <header>

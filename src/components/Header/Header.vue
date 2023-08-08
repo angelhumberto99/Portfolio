@@ -71,7 +71,7 @@
         const active = page.name === this.currentPage;
         const { icon } = page;
         const [ outline, regular ] = icon.types;
-        return [active ? regular: outline, icon.name];
+        return [active ? outline: regular, icon.name];
       }
     },
     computed: {

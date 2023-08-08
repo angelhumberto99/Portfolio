@@ -1,12 +1,10 @@
 $spacing-bottom: 2rem;
-$shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-0 18px 36px -18px rgba(0, 0, 0, 0.3),
-0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+$shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
 
 .timestamp {
   display: flex;
   margin: $spacing-bottom auto;
-  max-width: 800px;
+  max-width: 900px;
   align-items: center;
   transition: translate 1s ease;
 }
@@ -139,6 +137,7 @@ $shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: var(--light-color);
   text-shadow: #f6f9fc 0px 0px 0px;
 }
@@ -211,6 +210,7 @@ $shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     outline: none;
     border: 2px solid var(--dark-color);
     transition: none;
+    box-shadow: none;
 
     &::before {
       transition: none;

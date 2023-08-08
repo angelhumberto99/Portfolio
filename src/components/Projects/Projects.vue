@@ -56,7 +56,7 @@
 </script>
 
 <template>
-  <SnapObservable @observable="observe" class="background">
+  <SnapObservable @observable="observe">
     <section class="scrollable-wrapper">  
       <section class="content">
         <h1>projects</h1>
