@@ -14,8 +14,26 @@
   height: 100vh;
 }
 
+.description {
+  text-align: center;
+  h2 {
+    font-size: 2rem;
+    font-weight: 100;
+    white-space: pre-wrap;
+    line-height: 2.2rem;
+  }
+  margin: 2rem auto 3rem auto;
+  max-width: 900px;
+}
+
 @media screen and (max-height: 768px) {
   .content {
     padding-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    max-width: 500px;
   }
 }

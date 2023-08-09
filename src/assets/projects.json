@@ -11,7 +11,7 @@
     "technologies": [
       "React.js", "Socket.io", "Docker", "Docker-Compose", "Laravel", "RASA", "Python"
     ],
-    "color": "#555ac0"
+    "color": "#3897c6"
   },
   "Typed": {
     "date": "February 4 2023",
@@ -28,7 +28,7 @@
     "description": "Minigame for a speed typing challenge",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React.js", "Typescript"],
-    "color": "#ffa500"
+    "color": "#D9A1A0"
   },
   "This Cord": {
     "date": "June 30 2022",
@@ -42,7 +42,7 @@
     "description": "Concurrent chat application, based on the most popular voice chatting app 'Discord'",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React.js", "Socket.io", "Docker", "Docker-Compose", "Node.js"],
-    "color": "#9051aa"
+    "color": "#B2D2A4"
   },
   "Instantgrams": {
     "date": "April 4 2023",
@@ -50,7 +50,7 @@
     "description": "Application that shows the main page of instagram",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["Angular", "Spring-Boot"],
-    "color": "#24b47e"
+    "color": "#838BC2"
   },
   "3D Projection": {
     "date": "February 10 2022",
@@ -58,7 +58,7 @@
     "description": "Simple 3D renderer that shows 3D meshes on screen",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["Python", "Pygame", "Numpy", "Pandas"],
-    "color": "#e05564"
+    "color": "#f4c362"
   },
   "React Native Shop": {
     "date": "November 3 2021",
@@ -66,7 +66,7 @@
     "description": "Ecommerce mobile application simulator",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React Native", "Node.js"],
-    "color": "#ba9154"
+    "color": "#455676"
   },
   "React Native Calculator": {
     "date": "August 18 2021",
@@ -74,7 +74,7 @@
     "description": "Simple calculator for mobile devices",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React Native"],
-    "color": "#3a9e87"
+    "color": "#52ab96"
   },
   "Theam": {
     "date": "November 18 2020",
@@ -82,6 +82,6 @@
     "description": "School manager system for students and educators",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React.js", "Python", "Flask"],
-    "color": "#d1c62a"
+    "color": "#74466b"
   }
 }

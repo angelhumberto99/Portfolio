@@ -59,7 +59,9 @@
   <SnapObservable @observable="observe">
     <section class="scrollable-wrapper">  
       <section class="content">
-        <h1>projects</h1>
+        <header class="description">
+          <h2>Here are a couple of my most relevant projects I've made</h2>
+        </header>
         <template v-for="([key, value], index) of projects">
           <TimelineCard :show="show" :delay="index"
             :data="getProjectData(key, value)"

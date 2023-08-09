@@ -23,7 +23,7 @@
 
 <template>
   <SnapObservable @observable="observe" class="background">
-    <div class="scrollable-container">    
+    <div class="scrollable-container">
       <section class="container">
         <section class="data-container">
           <header :class="show?'show':'hide'" style="--delay: .8s">
