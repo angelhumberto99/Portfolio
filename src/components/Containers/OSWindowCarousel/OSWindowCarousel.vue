@@ -37,7 +37,8 @@
           this.index = index;
       },
       handleClose(type: string): void {
-        this.$emit('handleClose', type);
+        console.log(type)
+        this.$emit('handleClose');
       }
     },
     computed: {
@@ -46,8 +47,7 @@
         return `> ${this.location.replace('/', ' > ')} > ${currentImage}`;
       },
       getFile(): string {
-        const basePath = this.location.replace('public/', '');
-        return `${basePath}/${this.imgs[this.index]}`;
+        return `${this.location}/${this.imgs[this.index]}`;
       }
     },
     watch: {
@@ -84,7 +84,7 @@
         <p>{{ getFilePath }}</p>
       </section>
     </header>
-    <img :src="getFile" alt="typed" class="cover"/>
+    <img :src="getFile" :alt="`Images for ${location}`" class="cover"/>
   </section>
 </template>
 

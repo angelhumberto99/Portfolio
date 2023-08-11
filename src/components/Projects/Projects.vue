@@ -1,6 +1,6 @@
 <script lang='ts'>
   import { mapMutations } from 'vuex';
-  import { SnapObservable, OSWindowCarousel, TimelineCard, Overlay } from '../Containers';
+  import { SnapObservable, OSWindowCarousel, TimelineCard, Overlay, MobileCarousel } from '../Containers';
   import PROJECTS from '../../assets/projects.json';
   import { ProjectWithoutImgs, Project } from '../../types';
   import ListOfBadges from '../ListOfBadges/ListOfBadges.vue';
@@ -36,6 +36,18 @@
       getProjectData(key: string, value: Project): ProjectWithoutImgs {
         const { imgs: _,...rest } = value as Project;
         return { title: key, ...rest };
+      },
+      typeOfProject(type: string): boolean {
+        return this.overlayProject?.type === type
+      }
+    },
+    computed: {
+      getProjectImages(): Array<string> {
+        if (this.projects.length === 0) return [];
+        const [, project] = this.projects.find(([name])  => {
+          return name === this.location;
+        }) as [string, Project];
+        return project.imgs;
       }
     },
     mounted() {
@@ -50,7 +62,8 @@
     OSWindowCarousel,
     TimelineCard,
     Overlay,
-    ListOfBadges
+    ListOfBadges,
+    MobileCarousel
 }
   }
 </script>
@@ -73,14 +86,24 @@
         </template>
         <div style="height: 2rem;"></div>
       </section>
+
       <Overlay 
         @handleClose="handleClose" 
         :close="close"
         :style="colors"
         :data="overlayProject"
-        :location="location"
-        :projects="projects"
       >
+        <OSWindowCarousel v-if="typeOfProject('Desktop')"
+          :location="location" 
+          :imgs="getProjectImages" 
+          :close="close"
+          @handleClose="handleClose"
+        />
+        <MobileCarousel v-if="typeOfProject('Mobile')"
+          :location="location"
+          :close="close"
+          :imgs="getProjectImages"
+        />
       </Overlay>
     </section>
   </SnapObservable>

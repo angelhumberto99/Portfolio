@@ -93,8 +93,8 @@
       this.$nextTick(() => {
         globalThis.addEventListener('resize', this.onResize);
       });
-      this.onResize();
       this.$options.MOBILE_MAX_WIDTH = 768;
+      this.onResize();
     },
     watch: {
       currentPage() :void { this.setHover(); },

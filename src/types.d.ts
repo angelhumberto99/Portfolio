@@ -19,6 +19,7 @@ export interface ProjectWithoutImgs {
   longDescription: string;
   technologies: Array<string>;
   color: string;
+  type: string;
 }
 
 export interface Project extends ProjectWithoutImgs {

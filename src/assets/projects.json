@@ -1,6 +1,7 @@
 {
   "Assist": {
     "date": "June 22 2022",
+    "type": "Desktop",
     "imgs": [
       "1-Dashboard.jpg",
       "2-Ticket-System.jpg",
@@ -15,6 +16,7 @@
   },
   "Typed": {
     "date": "February 4 2023",
+    "type": "Desktop",
     "imgs": [
       "1-Layouts_Dark.gif",
       "2-Layouts_Light.gif",
@@ -32,6 +34,7 @@
   },
   "This Cord": {
     "date": "June 30 2022",
+    "type": "Desktop",
     "imgs": [
       "1-Login.gif",
       "2-Send_Message.gif",
@@ -46,6 +49,7 @@
   },
   "Instantgrams": {
     "date": "April 4 2023",
+    "type": "Desktop",
     "imgs": [],
     "description": "Application that shows the main page of instagram",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
@@ -54,7 +58,10 @@
   },
   "3D Projection": {
     "date": "February 10 2022",
-    "imgs": [],
+    "type": "Desktop",
+    "imgs": [
+
+    ],
     "description": "Simple 3D renderer that shows 3D meshes on screen",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["Python", "Pygame", "Numpy", "Pandas"],
@@ -62,7 +69,15 @@
   },
   "React Native Shop": {
     "date": "November 3 2021",
-    "imgs": [],
+    "type": "Mobile",
+    "imgs": [
+      "1-Login.gif",
+      "2-Filter.gif",
+      "3-Preview.gif",
+      "4-Buy.gif",
+      "5-Sell.gif",
+      "6-Edit.gif"
+    ],
     "description": "Ecommerce mobile application simulator",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React Native", "Node.js"],
@@ -70,7 +85,10 @@
   },
   "React Native Calculator": {
     "date": "August 18 2021",
-    "imgs": [],
+    "type": "Mobile",
+    "imgs": [
+      "1-Layout.jpg"
+    ],
     "description": "Simple calculator for mobile devices",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React Native"],
@@ -78,7 +96,14 @@
   },
   "Theam": {
     "date": "November 18 2020",
-    "imgs": [],
+    "type": "Desktop",
+    "imgs": [
+      "1-Login.jpg",
+      "2-Home.jpg",
+      "3-Offer.jpg",
+      "4-Schedule.jpg",
+      "5-Register.jpg"
+    ],
     "description": "School manager system for students and educators",
     "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
     "technologies": ["React.js", "Python", "Flask"],

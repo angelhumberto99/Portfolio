@@ -1,4 +1,4 @@
-$spacing-bottom: 2rem;
+$spacing-bottom: 4rem;
 $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
 
 .timestamp {
@@ -47,12 +47,20 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
   translate: 0 100%;
 }
 
+.timeline-card {
+  display: flex;
+  z-index: 1;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: $shadow;
+}
+
 @mixin button-lines {
   transition: width 0.3s ease, height 0.3s ease;
   content: "";
   position: absolute;
   background-color: var(--light-color);
-  z-index: -1;
 }
 
 .timeline-button {
@@ -74,7 +82,6 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
   font-weight: bold;
   font-size: 2rem;
   position: relative;
-  z-index: 1;
 
   &::before {
     @include button-lines();
@@ -111,7 +118,7 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
 
   &::after {
     transition-delay: .9s;
-    height: calc(var(--card-height) / 2);
+    height: calc(var(--card-height) / 2 + $spacing-bottom);
   }
 }
 
@@ -122,14 +129,6 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
   white-space: nowrap;
 }
 
-.timeline-card {
-  display: flex;
-  z-index: 1;
-  flex: 1;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: $shadow;
-}
 
 .date {
   background-color: var(--dark-color);
