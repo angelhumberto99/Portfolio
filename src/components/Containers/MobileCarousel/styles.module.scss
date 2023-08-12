@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  
 }
 
 .index-button {
@@ -17,7 +16,7 @@
 
   transition: background-color 0.3s ease, color 0.3s ease;
   &:hover {
-    background-color: #1F275E;
+    background-color: rgba(31, 39, 94, .8);
     color: white;
   }
 
@@ -32,11 +31,8 @@
 
 .phone-frame {
   padding: 30px 8px;
-  border-radius: 25px;
-  background-image: linear-gradient(90deg, 
-    black, white 5px, black 20px,
-    black calc(100% - 10px),
-     white, black);
+  border-radius: 30px;
+  background-color: #212121;
   max-width: 300px;
   display: flex;
   margin: 0 1rem;
@@ -44,6 +40,7 @@
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   scale: 1;
   transition: scale 0.3s ease-in-out;
+  border: 1px solid rgb(146, 146, 146);
 
   &::before {
     content: '';
@@ -62,12 +59,12 @@
     position: absolute;
     width: 20%;
     height: 4px;
-    background-color: rgb(55, 55, 55);
+    background-color: #212121;
     border-radius: 5px;
     top: 10px;
     left: 50%;
     translate: -50%;
-    border: 1px solid rgb(84, 84, 84);
+    border: 1px solid rgb(55, 55, 55);
   }
 }
 
@@ -108,7 +105,8 @@
   height: 15px;
   bottom: 8px;
   left: 50%;
-  background-image: linear-gradient(90deg, rgb(84, 84, 84), black 90%, rgb(84, 84, 84));
+  background-image: none;
+  background-color: #212121;
   translate: -50%;
   border: 1px solid rgb(161, 161, 161);
 }

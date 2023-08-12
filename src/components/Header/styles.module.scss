@@ -28,8 +28,21 @@ nav {
   box-shadow: $shadow;
 }
 
+.menu {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
 a {
-  padding: 5px 5px;
+  padding: 0 5px;
+  line-height: 2rem;
+  display: block;
   margin: 0;
   text-decoration: none;
   color: #1F275E;
@@ -67,23 +80,13 @@ a {
   }
 }
 
-.menu {
-  display: flex;
-  position: relative;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-  line-height: 36px;
-  list-style: none;
-}
-
 .hover-anchor {
   border-radius: 5px;
   position: absolute;
   width: var(--width-anchor);
   height: var(--height-anchor);
   background-color: rgba(31, 39, 94, .8);
-  top: calc(2px + var(--y-position));
+  top: var(--y-position);
   left: var(--x-position);
   z-index: -1;
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
@@ -110,6 +113,8 @@ a {
     height: 100vh;
     box-shadow: 10px 0 15px rgba(0, 46, 120, 0.3);
     background-color: #EBF3F3;
+    justify-content: normal;
+    align-items: normal;
     padding-top: calc(.5rem + var(--header-height));
     gap: .5rem;
 

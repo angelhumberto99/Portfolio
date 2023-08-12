@@ -66,6 +66,7 @@
       onResize(): void {
         this.windowWidth = globalThis.innerWidth;
         this.windowHeight = globalThis.innerHeight;
+        this.setHover();
       },
       getIcon(page: Page): [string, string] {
         const active = page.name === this.currentPage;
@@ -90,16 +91,14 @@
     },
     mounted() {
       this.anchors = this.$refs.page as Array<HTMLAnchorElement>;
+      this.onResize();
       this.$nextTick(() => {
         globalThis.addEventListener('resize', this.onResize);
       });
       this.$options.MOBILE_MAX_WIDTH = 768;
-      this.onResize();
     },
     watch: {
-      currentPage() :void { this.setHover(); },
-      windowWidth() :void { this.setHover(); },
-      windowHeight() :void { this.setHover(); }
+      currentPage() :void { this.setHover(); }
     }
   }
 </script>

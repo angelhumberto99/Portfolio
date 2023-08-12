@@ -1,5 +1,6 @@
 $spacing-bottom: 4rem;
 $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
+$radius: 15px;
 
 .timestamp {
   display: flex;
@@ -51,7 +52,7 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
   display: flex;
   z-index: 1;
   flex: 1;
-  border-radius: 8px;
+  border-radius: $radius;
   overflow: hidden;
   box-shadow: $shadow;
 }
@@ -101,7 +102,7 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
   }
 
   &:hover {
-    border-radius: 20px;
+    border-radius: $radius;
     outline: 3px solid var(--dark-color);
   }
 
@@ -170,7 +171,7 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
     flex-direction: column-reverse;
     max-width: 500px;
     z-index: 1;
-    border-radius: 8px;
+    border-radius: $radius;
     
     &::after {
       @include button-lines();
@@ -202,7 +203,7 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
   }
 
   .timeline-button {
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 $radius $radius;
     width: 100%;
     margin: 0 !important;
     aspect-ratio: 0;
@@ -222,7 +223,7 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
     }
 
     &:hover {
-      border-radius: 0 0 8px 8px;
+      border-radius: 0 0 $radius $radius;
       outline: none;
       border: 3px solid var(--dark-color);
       .text {
@@ -245,7 +246,7 @@ $shadow: 15px 15px 15px rgba(0, 46, 120, 0.3);
   .timeline-card {
     flex-direction: column;
     width: 100%;
-    border-radius: 8px 8px 0 0;
+    border-radius: $radius $radius 0 0;
     box-shadow: none;
   }
 }

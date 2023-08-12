@@ -26,16 +26,19 @@ body, html {
 
 
 @media (width >= 768px) {
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: rgba(0, 0, 0, .7);
-  }
-  
   ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, .5);;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: .6rem;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(31, 39, 94, .8);
   }
 }
