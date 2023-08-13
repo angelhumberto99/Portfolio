@@ -15,7 +15,18 @@
       "One month after its implementation, the reports sent through means outside the same platform have almost completely ceased, and the user experience of the SIGI system has improved, since the vast majority of problems can be attended to immediately instead of wait hours or days until a technical assistant solves it for us."
     ],
     "technologies": [
-      "React.js", "Socket.io", "Docker", "Docker-Compose", "Laravel", "RASA", "Python"
+      "React.js",
+      "HTML",
+      "SCSS/SASS",
+      "JavaScript",
+      "Socket.io",
+      "Docker",
+      "Docker-Compose",
+      "Laravel",
+      "MySQL",
+      "Redis",
+      "Python",
+      "RASA"
     ],
     "color": "#3897c6"
   },
@@ -32,9 +43,19 @@
       "7-Reset_Dark.gif",
       "8-Reset_Light.gif"
     ],
-    "description": "Minigame for a speed typing challenge",
-    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
-    "technologies": ["React.js", "Typescript"],
+    "description": "Minigame to improve typing skills on the computer keyboard using all fingers optimally.",
+    "longDescription": [
+      "This minigame is a recreation of one of my first web applications (Me-k-no).",
+      "This challenge consists of writing the phrases that are displayed on the screen as quickly as possible, in order to improve your skills and dexterity when typing on a computer keyboard using all your fingers.",
+      "The reason for creating this web page was to apply my knowledge of all the different technologies related to web development that I have learned over time and compare my progress since that first version back in 2020."
+    ],
+    "technologies": [
+      "React.js",
+      "HTML",
+      "SCSS/SASS",
+      "TypeScript",
+      "GitHub Pages"
+    ],
     "color": "#D9A1A0"
   },
   "This Cord": {
@@ -47,9 +68,22 @@
       "4-Send_DM.gif",
       "5-Join_Server.gif"
     ],
-    "description": "Concurrent chat application, based on the most popular voice chatting app 'Discord'",
-    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
-    "technologies": ["React.js", "Socket.io", "Docker", "Docker-Compose", "Node.js"],
+    "description": "This Cord is a clone of the famous messaging and video calling application known as Discord.",
+    "longDescription": [
+      "The first time we demo a messaging application, we usually create something quite simplified, in which there is only one global chat where anyone can communicate and see the messages of the rest.",
+      "In my case I went a little further, because I created a system to be able to start conversations privately, that is, Direct Messages (DM). And if that weren't enough, I decided to adopt the interface that Discord uses to practice implementing already established designs."
+    ],
+    "technologies": [
+      "React.js",
+      "HTML",
+      "SCSS/SASS",
+      "JavaScript",
+      "Socket.io",
+      "Docker",
+      "Docker-Compose",
+      "Node.js",
+      "Express.js"
+    ],
     "color": "#B2D2A4"
   },
   "Instantgrams": {
@@ -60,20 +94,39 @@
       "2-Resize.gif",
       "3-Overlay.gif"
     ],
-    "description": "Application that shows the main page of instagram",
-    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
-    "technologies": ["Angular", "Spring-Boot"],
+    "description": "Responsive clone of the home page of instagram.",
+    "longDescription": [
+      "Generally, when learning a backend or frontend library/framework, a CRUD system (Create, Read, Update, Delete) is usually carried out to practice this knowledge. In my case, I preferred to do something a little more original than a simple system that lists the elements from a database.",
+      "This web page is a clone of the Instagram home page. The objective of its creation was precisely to practice two new technologies that I had just learned, which were spring-boot for the backend and Angular for the frontend."
+    ],
+    "technologies": [
+      "Angular",
+      "HTML",
+      "SCSS/SASS",
+      "TypeScript",
+      "Spring-Boot",
+      "Java",
+      "MySQL"
+    ],
     "color": "#838BC2"
   },
   "3D Projection": {
     "date": "February 10 2022",
     "type": "Desktop",
     "imgs": [
-
+      "1-Cube_Isometric_Camera.gif",
+      "2-Cube_Perspective_Camera.gif",
+      "3-Pyramid_Isometric_Camera.gif",
+      "4-Pyramid_Perspective_Camera.gif"
     ],
     "description": "Simple 3D renderer that shows 3D meshes on screen",
     "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
-    "technologies": ["Python", "Pygame", "Numpy", "Pandas"],
+    "technologies": [
+      "Python",
+      "Pygame",
+      "Numpy",
+      "Pandas"
+    ],
     "color": "#f4c362"
   },
   "React Native Shop": {
@@ -89,7 +142,15 @@
     ],
     "description": "Ecommerce mobile application simulator",
     "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
-    "technologies": ["React Native", "Node.js"],
+    "technologies": [
+      "React Native",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "PHP",
+      "MySQL"
+    ],
     "color": "#455676"
   },
   "React Native Calculator": {
@@ -100,7 +161,10 @@
     ],
     "description": "Simple calculator for mobile devices",
     "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
-    "technologies": ["React Native"],
+    "technologies": [
+      "React Native",
+      "JavaScript"
+    ],
     "color": "#52ab96"
   },
   "Theam": {
@@ -115,7 +179,15 @@
     ],
     "description": "School manager system for students and educators",
     "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
-    "technologies": ["React.js", "Python", "Flask"],
+    "technologies": [
+      "React.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "MySQL"
+    ],
     "color": "#74466b"
   }
 }

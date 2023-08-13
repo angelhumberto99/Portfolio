@@ -38,10 +38,10 @@
             {{ paragraph }}
           </p>
         </article>
+        <footer class="overlay-footer">
+          <ListOfBadges :badges="data?.technologies"/>
+        </footer>
       </section>
-      <footer class="overlay-footer">
-        <ListOfBadges :badges="data?.technologies"/>
-      </footer>
     </div>
   </div>
 </template>
