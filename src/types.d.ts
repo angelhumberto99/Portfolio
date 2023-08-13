@@ -16,7 +16,7 @@ export interface ProjectWithoutImgs {
   title?: string;
   date: string;
   description: string;
-  longDescription: string;
+  longDescription: Array<string>;
   technologies: Array<string>;
   color: string;
   type: string;

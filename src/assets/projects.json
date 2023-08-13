@@ -7,8 +7,13 @@
       "2-Ticket-System.jpg",
       "3-Widget.jpg"
     ],
-    "description": "Chat application",
-    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
+    "description": "Intelligent virtual assistant / Ticket system built to resolve technical questions and report malfunctioning of the platform where it is implemented.",
+    "longDescription": [
+      "The UDG (Universidad de Guadalajara) has at its disposal its own system for the financial management of its academic centers known as the SIGI system (Integral Management and Information System).",
+      "Unfortunately, the UDG software development team, in addition to their tasks as programmers, also had to be in charge of answering questions and reports on the SIGI platform, which greatly hindered the development of other systems.",
+      "The solution given to the previous problem was achieved thanks to the Assist project, which was in charge of attending to the most recurring issues through artificial intelligence and delegating those more complex incidents to technical personnel.",
+      "One month after its implementation, the reports sent through means outside the same platform have almost completely ceased, and the user experience of the SIGI system has improved, since the vast majority of problems can be attended to immediately instead of wait hours or days until a technical assistant solves it for us."
+    ],
     "technologies": [
       "React.js", "Socket.io", "Docker", "Docker-Compose", "Laravel", "RASA", "Python"
     ],
@@ -28,7 +33,7 @@
       "8-Reset_Light.gif"
     ],
     "description": "Minigame for a speed typing challenge",
-    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
+    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
     "technologies": ["React.js", "Typescript"],
     "color": "#D9A1A0"
   },
@@ -43,16 +48,20 @@
       "5-Join_Server.gif"
     ],
     "description": "Concurrent chat application, based on the most popular voice chatting app 'Discord'",
-    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
+    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
     "technologies": ["React.js", "Socket.io", "Docker", "Docker-Compose", "Node.js"],
     "color": "#B2D2A4"
   },
   "Instantgrams": {
     "date": "April 4 2023",
     "type": "Desktop",
-    "imgs": [],
+    "imgs": [
+      "1-Home.gif",
+      "2-Resize.gif",
+      "3-Overlay.gif"
+    ],
     "description": "Application that shows the main page of instagram",
-    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
+    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
     "technologies": ["Angular", "Spring-Boot"],
     "color": "#838BC2"
   },
@@ -63,7 +72,7 @@
 
     ],
     "description": "Simple 3D renderer that shows 3D meshes on screen",
-    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
+    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
     "technologies": ["Python", "Pygame", "Numpy", "Pandas"],
     "color": "#f4c362"
   },
@@ -79,7 +88,7 @@
       "6-Edit.gif"
     ],
     "description": "Ecommerce mobile application simulator",
-    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
+    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
     "technologies": ["React Native", "Node.js"],
     "color": "#455676"
   },
@@ -90,7 +99,7 @@
       "1-Layout.jpg"
     ],
     "description": "Simple calculator for mobile devices",
-    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
+    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
     "technologies": ["React Native"],
     "color": "#52ab96"
   },
@@ -105,7 +114,7 @@
       "5-Register.jpg"
     ],
     "description": "School manager system for students and educators",
-    "longDescription": "lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip",
+    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
     "technologies": ["React.js", "Python", "Flask"],
     "color": "#74466b"
   }

@@ -30,7 +30,7 @@ $shadow: 15px 15px 15px rgba(0, 0, 0, .5);
   display: flex;
   width: 90%;
   max-height: 90%;
-  overflow-y: auto;
+  overflow: hidden;
   flex-direction: column;
   max-width: 1200px;
   background-color: white;
@@ -65,19 +65,28 @@ $shadow: 15px 15px 15px rgba(0, 0, 0, .5);
       color: rgba(255, 255, 255, 0.5);
     }
   }
-  h4 {
-    color: var(--dark-color);
-    padding: 0.5rem 1rem;
-    margin: 0;
-  }
+  
 }
 
 .overlay-body {
-  margin: 1rem;
   flex: 1;
-  p {
-    color: #212121;
+  overflow-y: auto;
+}
+
+.carousel {
+  h4 {
+    color: var(--dark-color);
+    padding: 0.5rem 0;
+    margin-top: 1rem;
   }
+  padding: 2rem 2rem 0 2rem;
+}
+
+.long-description {
+  p {
+    color: inherit;
+  }
+  padding: 0 2rem 2rem 2rem;
 }
 
 .overlay-footer {

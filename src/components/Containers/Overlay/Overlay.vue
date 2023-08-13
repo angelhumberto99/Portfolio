@@ -27,11 +27,17 @@
             <font-awesome-icon :icon="['fas', 'xmark']" />
           </button>
         </h2>
-        <h4>{{ data?.date }}</h4>
       </header>
       <section class="overlay-body">
-        <slot/>
-        <p>{{ data?.longDescription }}</p>
+        <div class="carousel">
+          <slot/>
+          <h4>{{ data?.date }}</h4>
+        </div>
+        <article class="long-description">
+          <p v-for="paragraph in data?.longDescription">
+            {{ paragraph }}
+          </p>
+        </article>
       </section>
       <footer class="overlay-footer">
         <ListOfBadges :badges="data?.technologies"/>
