@@ -138,7 +138,9 @@ $radius: 15px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--light-color);
+  h2 {
+    color: var(--light-color);
+  }
   text-shadow: #f6f9fc 0px 0px 0px;
 }
 

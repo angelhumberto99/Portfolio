@@ -71,6 +71,10 @@ $shadow: 15px 15px 15px rgba(0, 0, 0, .5);
 .overlay-body {
   flex: 1;
   overflow-y: auto;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color);
+  }
 }
 
 .carousel {

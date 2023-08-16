@@ -12,7 +12,7 @@
       "The UDG (Universidad de Guadalajara) has at its disposal its own system for the financial management of its academic centers known as the SIGI system (Integral Management and Information System).",
       "Unfortunately, the UDG software development team, in addition to their tasks as programmers, also had to be in charge of answering questions and reports on the SIGI platform, which greatly hindered the development of other systems.",
       "The solution given to the previous problem was achieved thanks to the Assist project, which was in charge of attending to the most recurring issues through artificial intelligence and delegating those more complex incidents to technical personnel.",
-      "One month after its implementation, the reports sent through means outside the same platform have almost completely ceased, and the user experience of the SIGI system has improved, since the vast majority of problems can be attended to immediately instead of wait hours or days until a technical assistant solves it for us."
+      "One month after its implementation, the reports sent through means outside the same platform have almost completely ceased, and the user experience of the SIGI system has improved, since the vast majority of problems can be attended immediately instead of waiting hours or days until a technical assistant resolves it for us."
     ],
     "technologies": [
       "React.js",
@@ -119,8 +119,12 @@
       "3-Pyramid_Isometric_Camera.gif",
       "4-Pyramid_Perspective_Camera.gif"
     ],
-    "description": "Simple 3D renderer that shows 3D meshes on screen",
-    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
+    "description": "Simple renderer that let us interact with 3D models on screen.",
+    "longDescription": [
+      "The most basic part of a game engine is based on rendering both 2D and 3D images. As well as the manipulation of its environment through movement and rotation vectors.",
+      "For this program, I decided to create an algorithm capable of representing interconnected vertices in order to form geometric figures in a three-dimensional space.",
+      "To manipulate the rotations of our objects on screen, I used Euler angles Instead of Quaternions, because they are much easier to implement, but using this comes with a disadvantage known as Gimbal Lock, which occurs when two rotation vectors overlap, due to the non-commutativity property of matrices multiplications which causes the loss of orientation in one of the axes of our 3D models."
+    ],
     "technologies": [
       "Python",
       "Pygame",
@@ -140,8 +144,11 @@
       "5-Sell.gif",
       "6-Edit.gif"
     ],
-    "description": "Ecommerce mobile application simulator",
-    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
+    "description": "Ecommerce mobile application simulator.",
+    "longDescription": [
+      "This was my final project for the web programming course, which was a virtual store simulator, where you can sell and buy items from a list of products.",
+      "Originally, this application consulted a backend made with pure php and a MySQL database managed with phpMyAdmin, but for another course I had to use a different database and manager, so I redid the backend with node.js and express along with PostgreSQL."
+    ],
     "technologies": [
       "React Native",
       "JavaScript",
@@ -159,8 +166,10 @@
     "imgs": [
       "1-Layout.jpg"
     ],
-    "description": "Simple calculator for mobile devices",
-    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
+    "description": "Simple calculator for mobile devices.",
+    "longDescription": [
+      "This was my first application for mobile devices, it is a simple calculator, in which I learned the basics of React Native and mobile styling."
+    ],
     "technologies": [
       "React Native",
       "JavaScript"
@@ -177,8 +186,12 @@
       "4-Schedule.jpg",
       "5-Register.jpg"
     ],
-    "description": "School manager system for students and educators",
-    "longDescription": ["lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor sit amet, consectetur adip"],
+    "description": "School course manager for students and educators.",
+    "longDescription": [
+      "Theam was one of my first web pages, it is my final project for the software engineering course, in which my team and I had to assume the role of project managers.",
+      "We had to interview a third party to plan and implement software that would meet his needs, using project management techniques and methodologies.",
+      "Finally we ended up doing a redesign of the SIIAU website (Comprehensive University Information and Administration System), obviously it was an unofficial version and it worked as a simulator rather than as a service."
+    ],
     "technologies": [
       "React.js",
       "HTML",
@@ -188,6 +201,24 @@
       "Flask",
       "MySQL"
     ],
-    "color": "#74466b"
+    "color": "#f7b04d"
+  },
+  "Neumorphism": {
+    "date": "December 13 2020",
+    "type": "Desktop",
+    "imgs": [
+      "1-Clock.gif"
+    ],
+    "description": "Analog clock with neumorphism styling",
+    "longDescription": [
+      "Neumorphism is a design style for graphical interfaces that gives users the sensation of relief and smoothness in its visual components.",
+      "I created this page to get a little practice building web pages with vanilla JavaScript, HTML, and CSS."
+    ],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "color": "#877bab"
   }
 }

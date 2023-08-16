@@ -1,0 +1,158 @@
+[
+  {
+    "type": "fa",
+    "name": "Python",
+    "iconName": "python"
+
+  },
+  {
+    "type": "fa",
+    "name": "Java",
+    "iconName": "java"
+  },
+  {
+    "type": "fa",
+    "name": "JavaScript",
+    "iconName": "square-js"
+  },
+  {
+    "type": "fa",
+    "name": "HTML",
+    "iconName": "html5"
+  },
+  {
+    "type": "fa",
+    "name": "CSS",
+    "iconName": "css3-alt"
+  },
+  {
+    "type": "fa",
+    "name": "SASS",
+    "iconName": "sass"
+  },
+  {
+    "type": "fa",
+    "name": "React",
+    "iconName": "react"
+  },
+  {
+    "type": "fa",
+    "name": "Vue.js",
+    "iconName": "vuejs"
+  },
+  {
+    "type": "fa",
+    "name": "Angular",
+    "iconName": "angular"
+  },
+  {
+    "type": "fa",
+    "name": "Go",
+    "iconName": "golang"
+  },
+  {
+    "type": "fa",
+    "name": "Docker",
+    "iconName": "docker"
+  },
+  {
+    "type": "fa",
+    "name": "Node.js",
+    "iconName": "node-js"
+  },
+  {
+    "type": "fa",
+    "name": "GitHub",
+    "iconName": "github"
+  },
+  {
+    "type": "fa",
+    "name": "GitLab",
+    "iconName": "gitlab"
+  },
+  {
+    "type": "fa",
+    "name": "git",
+    "iconName": "git-alt"
+  },
+  {
+    "type": "devicon",
+    "name": "C",
+    "iconName": "c-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "C++",
+    "iconName": "cplusplus-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "C#",
+    "iconName": "csharp-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "PostgreSQL",
+    "iconName": "postgresql-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "mySQL",
+    "iconName": "mysql-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "Redux",
+    "iconName": "redux-original"
+  },
+  {
+    "type": "devicon",
+    "name": "Socket.io",
+    "iconName": "socketio-original"
+  },
+  {
+    "type": "devicon",
+    "name": "Springboot",
+    "iconName": "spring-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "Ubuntu",
+    "iconName": "ubuntu-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "SDL2",
+    "iconName": "sdl-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "QT creator",
+    "iconName": "qt-original"
+  },
+  {
+    "type": "devicon",
+    "name": "Visual Studio",
+    "iconName": "vscode-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "NPM",
+    "iconName": "npm-original-wordmark"
+  },
+  {
+    "type": "devicon",
+    "name": "Numpy",
+    "iconName": "numpy-original"
+  },
+  {
+    "type": "devicon",
+    "name": "PHP",
+    "iconName": "php-plain"
+  },
+  {
+    "type": "devicon",
+    "name": "Express",
+    "iconName": "express-original"
+  }
+]

@@ -18,6 +18,18 @@ body, html {
   padding: 0;
 }
 
+p {
+  line-height: 1.3rem;
+}
+
+h1, h2 {
+  color: #6E5DD8;
+}
+
+h4 {
+  color: #1a85b7;
+}
+
 #app {
   height: 100vh;
   overflow: hidden scroll;

@@ -73,7 +73,8 @@
     <section class="scrollable-wrapper">  
       <section class="content">
         <header class="description">
-          <h2>Here are a couple of my most relevant projects I've made</h2>
+          <h2>Here are a couple of my most recent projects I've made</h2>
+          <h4>Check them out</h4>
         </header>
         <template v-for="([key, value], index) of projects">
           <TimelineCard :show="show" :delay="index"
