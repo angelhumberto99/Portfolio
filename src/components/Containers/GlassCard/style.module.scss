@@ -39,7 +39,10 @@
 
 @media screen and (max-width: 768px) {
   .card:hover {
+    &::before {
+      background-image: none;
+    }
     transform: none;
-    box-shadow: none;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
 }

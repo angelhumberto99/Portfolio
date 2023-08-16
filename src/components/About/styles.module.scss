@@ -25,23 +25,19 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: calc(600px + 4rem);
+  max-width: 700px;
   perspective: 1500px;
   gap: 2rem;
   margin: 2rem 0;
 }
 
 .profile-data {
-  max-width: 600px;
   padding: 2rem;
-  overflow: auto;
 }
 
 .skills {
   margin: 0 !important;
-  & > * {
-    height: 70%;
-  }
+  margin-bottom: 2rem !important;
 }
 
 .profile-article {
@@ -79,6 +75,11 @@
 .technologies {
   display: flex;
   flex-wrap: wrap;
+  & > * {
+    justify-content: center;
+    flex: 1 1 20%;
+    text-align: center;
+  }
 }
 
 .icon {
@@ -95,7 +96,6 @@
     display: flex;
     font-size: 1rem;
     width: 0px;
-    margin-left: 1rem;
     overflow: hidden;
   }
 
@@ -103,7 +103,8 @@
     background-color: orange;
     span {
       transition: all 0.5s ease;
-      width: 100%;
+      width: auto;
+      margin-left: 0.5rem;
     }
   }
 }
