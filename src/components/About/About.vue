@@ -2,11 +2,13 @@
   import { mapMutations } from 'vuex';
   import { GlassCard, SnapObservable } from '../Containers';
   import technologies from '../../assets/technologies.json';
+  import { hexToRGB } from '../../utils/hexToRGB.ts';
 
   interface Technology {
     type: string;
     name: string;
     iconName: string;
+    color: string;
   }
 
   export default {
@@ -22,6 +24,9 @@
       observe(value: boolean): void { 
         this.show = value;
         if (value) this.setCurrentPage('About');
+      },
+      getColor(color: string): string {
+        return hexToRGB(color);
       }
     },
     mounted() {
@@ -84,11 +89,13 @@
             <hr/>
             <h4>Technologies</h4>
             <div class="technologies">
-              <div class="icon" v-for="icon in icons">
-                <font-awesome-icon v-if="icon.type == 'fa'" :icon="['fab', icon.iconName]"/>
-                <i v-else :class="[`devicon-${icon.iconName}`, 'programming-icon']"></i>
-                <span>{{ icon.name }}</span>
-              </div>
+              <template v-for="icon in icons">
+                <div class="icon" :style="[{'--color': getColor(icon.color)}]">
+                  <font-awesome-icon v-if="icon.type == 'fa'" :icon="['fab', icon.iconName]"/>
+                  <i v-else :class="[`devicon-${icon.iconName}`, 'programming-icon']"/>
+                  <span>{{ icon.name }}</span>
+                </div>
+              </template>
             </div>
             <h4>Languajes</h4>
             <ul>

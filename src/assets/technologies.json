@@ -2,157 +2,187 @@
   {
     "type": "fa",
     "name": "Python",
-    "iconName": "python"
-
+    "iconName": "python",
+    "color": "#007ff4"
   },
   {
     "type": "fa",
     "name": "Java",
-    "iconName": "java"
+    "iconName": "java",
+    "color": "#eb3435"
   },
   {
     "type": "fa",
     "name": "JavaScript",
-    "iconName": "square-js"
+    "iconName": "square-js",
+    "color": "#f7e025"
   },
   {
     "type": "fa",
     "name": "HTML",
-    "iconName": "html5"
+    "iconName": "html5",
+    "color": "#ff5722"
   },
   {
     "type": "fa",
     "name": "CSS",
-    "iconName": "css3-alt"
+    "iconName": "css3-alt",
+    "color": "#006bc0"
   },
   {
     "type": "fa",
     "name": "SASS",
-    "iconName": "sass"
+    "iconName": "sass",
+    "color": "#ce679a"
   },
   {
     "type": "fa",
     "name": "React",
-    "iconName": "react"
+    "iconName": "react",
+    "color": "#61dafb"
   },
   {
     "type": "fa",
     "name": "Vue.js",
-    "iconName": "vuejs"
+    "iconName": "vuejs",
+    "color": "#49d191"
   },
   {
     "type": "fa",
     "name": "Angular",
-    "iconName": "angular"
+    "iconName": "angular",
+    "color": "#e42939"
   },
   {
     "type": "fa",
     "name": "Go",
-    "iconName": "golang"
+    "iconName": "golang",
+    "color": "#74cedd"
   },
   {
     "type": "fa",
     "name": "Docker",
-    "iconName": "docker"
+    "iconName": "docker",
+    "color": "#2496ed"
   },
   {
     "type": "fa",
     "name": "Node.js",
-    "iconName": "node-js"
-  },
-  {
-    "type": "fa",
-    "name": "GitHub",
-    "iconName": "github"
-  },
-  {
-    "type": "fa",
-    "name": "GitLab",
-    "iconName": "gitlab"
+    "iconName": "node-js",
+    "color": "#91c63d"
   },
   {
     "type": "fa",
     "name": "git",
-    "iconName": "git-alt"
+    "iconName": "git-alt",
+    "color": "#f05133"
+  },
+  {
+    "type": "fa",
+    "name": "GitHub",
+    "iconName": "github",
+    "color": "#6e5dd8"
+  },
+  {
+    "type": "fa",
+    "name": "GitLab",
+    "iconName": "gitlab",
+    "color": "#fc6b0e"
   },
   {
     "type": "devicon",
     "name": "C",
-    "iconName": "c-plain"
+    "iconName": "c-plain",
+    "color": "#3747a9"
   },
   {
     "type": "devicon",
     "name": "C++",
-    "iconName": "cplusplus-plain"
+    "iconName": "cplusplus-plain",
+    "color": "#00589d"
   },
   {
     "type": "devicon",
     "name": "C#",
-    "iconName": "csharp-plain"
+    "iconName": "csharp-plain",
+    "color": "#9b4f97"
   },
   {
     "type": "devicon",
     "name": "PostgreSQL",
-    "iconName": "postgresql-plain"
+    "iconName": "postgresql-plain",
+    "color": "#316092"
   },
   {
     "type": "devicon",
     "name": "mySQL",
-    "iconName": "mysql-plain"
+    "iconName": "mysql-plain",
+    "color": "#e48e00"
   },
   {
     "type": "devicon",
     "name": "Redux",
-    "iconName": "redux-original"
+    "iconName": "redux-original",
+    "color": "#764abc"
   },
   {
     "type": "devicon",
     "name": "Socket.io",
-    "iconName": "socketio-original"
+    "iconName": "socketio-original",
+    "color": "#1F275E"
   },
   {
     "type": "devicon",
     "name": "Springboot",
-    "iconName": "spring-plain"
+    "iconName": "spring-plain",
+    "color": "#6db33f"
   },
   {
     "type": "devicon",
     "name": "Ubuntu",
-    "iconName": "ubuntu-plain"
+    "iconName": "ubuntu-plain",
+    "color": "#f4751b"
   },
   {
     "type": "devicon",
     "name": "SDL2",
-    "iconName": "sdl-plain"
-  },
-  {
-    "type": "devicon",
-    "name": "QT creator",
-    "iconName": "qt-original"
-  },
-  {
-    "type": "devicon",
-    "name": "Visual Studio",
-    "iconName": "vscode-plain"
+    "iconName": "sdl-plain",
+    "color": "#103255"
   },
   {
     "type": "devicon",
     "name": "NPM",
-    "iconName": "npm-original-wordmark"
+    "iconName": "npm-original-wordmark",
+    "color": "#cc3534"
   },
   {
     "type": "devicon",
     "name": "Numpy",
-    "iconName": "numpy-original"
+    "iconName": "numpy-original",
+    "color": "#4d77cf"
   },
   {
     "type": "devicon",
     "name": "PHP",
-    "iconName": "php-plain"
+    "iconName": "php-plain",
+    "color": "#4f5b93"
   },
   {
     "type": "devicon",
     "name": "Express",
-    "iconName": "express-original"
+    "iconName": "express-original",
+    "color": "#1F275E"
+  },
+  {
+    "type": "devicon",
+    "name": "QT creator",
+    "iconName": "qt-original",
+    "color": "#3fc74f"
+  },
+  {
+    "type": "devicon",
+    "name": "Visual Studio",
+    "iconName": "vscode-plain",
+    "color": "#307fb4"
   }
 ]
