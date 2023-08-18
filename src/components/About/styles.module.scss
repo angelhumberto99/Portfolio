@@ -4,6 +4,17 @@
   align-items: center;
 }
 
+.show {
+  transition: translate .5s ease-in-out, opacity 1s ease-in-out;
+  translate: 0%;
+  opacity: 1;
+}
+
+.hide {
+  translate: 0 -100%;
+  opacity: 0;
+}
+
 .section-wrapper {
   display: flex;
   width: 100vw;
@@ -55,79 +66,9 @@
   }
 }
 
-.education-contents {
-  display: flex;
-  flex-wrap: wrap;
-  ul {
-    margin-top: 0;
-  }
-  justify-content: space-between;
-  align-items: center;
-}
-
-.udg-logo {
-  width: 100%;
-  max-width: 100px;
-  object-fit: contain;
-  mix-blend-mode: difference;
-}
-
-.technologies {
-  display: flex;
-  flex-wrap: wrap;
-  & > * {
-    justify-content: center;
-    flex: 1 1 20%;
-    text-align: center;
-  }
-}
-
-.icon {
-  z-index: 0;
-  display: flex;
-  line-height: 3rem;
-  padding: .5rem;
-  height: 3rem;
-  font-size: 3rem;
-  border-radius: 10px;
-  transition: all 0.5s ease;
-  svg {
-    color: rgb(var(--color));
-  }
-  span {
-    display: flex;
-    font-size: 1rem;
-    width: 0px;
-    overflow: hidden;
-    color: rgb(var(--color));
-  }
-
-  &:hover {
-    background-color: rgba(var(--color), .3);
-    span {
-      transition: all 0.5s ease;
-      width: auto;
-      margin-left: 0.5rem;
-    }
-  }
-}
-
-.programming-icon {
-  font-size: 3rem;
-  color: rgb(var(--color));
-}
-
 @media screen and (max-width: 768px) {
   .section-wrapper {
     margin-top: 0;
     padding: 2.5rem 0;
-  }
-
-  .icon {
-    flex: 1 1 25%;
-  }
-
-  .udg-logo {
-    margin: 1rem auto
   }
 }

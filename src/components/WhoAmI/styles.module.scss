@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+}
+
+.profile {
+  width: 150px;
+  object-fit: contain;
+}
+
+h4, .bottom-hr {
+  display: none;
+}
+
+.description {
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .description {
+    padding: 0;
+  }
+
+  h4, .bottom-hr {
+    display: block;
+  }
+
+  h2, .top-hr {
+    display: none;
+  }
+}

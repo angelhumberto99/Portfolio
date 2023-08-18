@@ -1,22 +1,15 @@
 <script lang='ts'>
   import { mapMutations } from 'vuex';
   import { GlassCard, SnapObservable } from '../Containers';
-  import technologies from '../../assets/technologies.json';
-  import { hexToRGB } from '../../utils/hexToRGB.ts';
-
-  interface Technology {
-    type: string;
-    name: string;
-    iconName: string;
-    color: string;
-  }
+  import Education from '../Education/Education.vue';
+  import WhoAmI from '../WhoAmI/WhoAmI.vue';
+  import Skills from '../Skills/Skills.vue';
 
   export default {
     name: 'About',
     data() {
       return { 
-        show: false as boolean,
-        icons: [] as Array<Technology>
+        show: false as boolean
       }      
     },
     methods: {
@@ -25,85 +18,42 @@
         this.show = value;
         if (value) this.setCurrentPage('About');
       },
-      getColor(color: string): string {
-        return hexToRGB(color);
-      }
     },
-    mounted() {
-      this.icons = technologies as Array<Technology>
+    computed: {
+      animate(): string {
+        return this.show ? 'show' : 'hide';
+      }
     },
     components: {
       SnapObservable,
-      GlassCard
-  }
+      GlassCard,
+      Education,
+      WhoAmI,
+      Skills
+    }
   }
 </script>
 
 <template>
   <SnapObservable @observable="observe" class="background">
     <div class="section-wrapper">
-      <div class="profile-group">
-          <GlassCard class="profile-data">
-            <article class="profile-article">
-              <h2>Who am I?</h2>
-              <hr/>
-              <p>
-                Computer engineer with great skills in frontend development, highly
-                motivated to innovate and implement high quality pieces of software.
-              </p>
-              <p>
-                Self-taught and passionate about improving and learning
-                new skills that add to my development as a programmer.
-              </p>
-              <p>
-                Prepared to add value to the projects that are presented
-                to me and ready to start working.
-              </p>
-            </article>
-          </GlassCard>
-          <GlassCard class="profile-data">
-            <article class="profile-article">
-              <h2>Education</h2>
-              <hr/>
-              <h4>Computer Engineering</h4>
-              <p>2018 - 2022, Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI)</p>
-              <h4>Career contents</h4>
-              <section class="education-contents">
-                <ul>
-                <li>Data Structures and Algorithms</li>
-                <li>Distribuited and Intelligent Systems</li>
-                <li>Computer Architecture</li>
-                <li>Databases</li>
-                <li>Software Engineering</li>
-                <li>Web Development</li>
-              </ul>
-              <img class="udg-logo" src="../../assets/UDG-Logo.png" alt="UDG Logo"/>
-            </section>
+      <div :class="['profile-group', animate]">
+        <GlassCard class="profile-data">
+          <article class="profile-article">
+            <WhoAmI/>
+          </article>
+        </GlassCard>
+        <GlassCard class="profile-data">
+          <article class="profile-article">
+            <Education/>
           </article>
         </GlassCard>
       </div>
-      <div class="profile-group skills">
+      <div :class="['profile-group', 'skills', animate]">
         <GlassCard class="profile-data">
           <article class="profile-article">
-            <h2>Skills</h2>
-            <hr/>
-            <h4>Technologies</h4>
-            <div class="technologies">
-              <template v-for="icon in icons">
-                <div class="icon" :style="[{'--color': getColor(icon.color)}]">
-                  <font-awesome-icon v-if="icon.type == 'fa'" :icon="['fab', icon.iconName]"/>
-                  <i v-else :class="[`devicon-${icon.iconName}`, 'programming-icon']"/>
-                  <span>{{ icon.name }}</span>
-                </div>
-              </template>
-            </div>
-            <h4>Languajes</h4>
-            <ul>
-              <li>Spanish - Native speaker</li>
-              <li>English - Fluent</li>
-              <li>German - Conversational</li>
-            </ul>
-            </article>
+            <Skills/>
+          </article>
         </GlassCard>
       </div>
     </div>

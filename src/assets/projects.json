@@ -147,7 +147,7 @@
     "description": "Ecommerce mobile application simulator.",
     "longDescription": [
       "This was my final project for the web programming course, which was a virtual store simulator, where you can sell and buy items from a list of products.",
-      "Originally, this application consulted a backend made with pure php and a MySQL database managed with phpMyAdmin, but for another course I had to use a different database and manager, so I redid the backend with node.js and express along with PostgreSQL."
+      "Originally, this application consulted a backend made with PHP and a MySQL database managed with phpMyAdmin, but for another course I had to use a different database and manager, so I redid the backend with node.js and express along with PostgreSQL."
     ],
     "technologies": [
       "React Native",
@@ -188,8 +188,8 @@
     ],
     "description": "School course manager for students and educators.",
     "longDescription": [
-      "Theam was one of my first web pages, it is my final project for the software engineering course, in which my team and I had to assume the role of project managers.",
-      "We had to interview a third party to plan and implement software that would meet his needs, using project management techniques and methodologies.",
+      "Theam was one of my first web pages, it was my final project for the software engineering course, in which my team and I had to assume the role of project managers.",
+      "We had to interview a third party to plan and implement software that would meet his needs, using project management techniques and agile methodologies.",
       "Finally we ended up doing a redesign of the SIIAU website (Comprehensive University Information and Administration System), obviously it was an unofficial version and it worked as a simulator rather than as a service."
     ],
     "technologies": [

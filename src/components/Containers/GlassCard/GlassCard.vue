@@ -1,7 +1,6 @@
 <script lang='ts'>
   export default {
     name:'GlassCard',
-    props: ['animate', 'showClass', 'hideClass'],
     data() {
       return {
         xRotation: 0 as number,
@@ -43,9 +42,6 @@
       }
     },
     computed: {
-      getAnimation(): string {
-        return this.animate ? this.showClass: this.hideClass
-      },
       rotation(): string {
         return `
           --x-rotation: ${this.xRotation};
@@ -63,7 +59,7 @@
   <section ref="card"
     @mouseenter="setBounding"
     @mousemove="handlePosition($event)" 
-    :class="['card', getAnimation]" :style="rotation">
+    class="card" :style="rotation">
       <slot/>
   </section>
 </template>

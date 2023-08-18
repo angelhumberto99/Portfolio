@@ -1,0 +1,23 @@
+.education-contents {
+  display: flex;
+  flex-wrap: wrap;
+  ul {
+    margin-top: 0;
+  }
+  justify-content: space-between;
+  align-items: center;
+}
+
+.udg-logo {
+  width: 100%;
+  max-width: 100px;
+  object-fit: contain;
+  mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 768px) {
+  .udg-logo {
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+}
