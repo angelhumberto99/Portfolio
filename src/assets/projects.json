@@ -114,10 +114,10 @@
     "date": "February 10 2022",
     "type": "Desktop",
     "imgs": [
-      "1-Cube_Isometric_Camera.gif",
-      "2-Cube_Perspective_Camera.gif",
-      "3-Pyramid_Isometric_Camera.gif",
-      "4-Pyramid_Perspective_Camera.gif"
+      "1-Cube-Isometric-Camera.gif",
+      "2-Cube-Perspective-Camera.gif",
+      "3-Pyramid-Isometric-Camera.gif",
+      "4-Pyramid-Perspective-Camera.gif"
     ],
     "description": "Simple renderer that let us interact with 3D models on screen.",
     "longDescription": [

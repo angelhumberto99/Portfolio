@@ -50,7 +50,9 @@
         </section>
         <section :class="['image-container', show? 'img-show': 'img-hide']">
           <div class="blob">
-            <img src="../../assets/profile-placeholder.png" alt="profile image"/>
+            <img src="../../assets/profile-placeholder.png"
+              alt="profile image" :class="show? '': 'gray-filter'"
+            />
           </div>
         </section>
       </section>

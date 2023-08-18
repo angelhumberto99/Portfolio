@@ -53,10 +53,19 @@
   align-items: center;
   justify-content: center;
   margin: 0 2rem;
+  max-width: 500px;
+  z-index: -1;
   img {
-    width: 100%;
-    max-width: 500px;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    border-radius: 50%;
+    background-image: radial-gradient(#2c2f43, #212121);
+    transition: filter 1.5s ease-in-out;
   }
+}
+
+.gray-filter {
+  filter: grayscale(100%);
 }
 
 @mixin initial-blob {

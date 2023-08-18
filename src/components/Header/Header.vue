@@ -15,8 +15,7 @@
         headerHeight: 0 as number,
         windowWidth: 0 as number,
         windowHeight: 0 as number,
-        pages: pages as Array<Page>,
-        anchors: null as null | Array<HTMLAnchorElement>
+        pages: pages as Array<Page>
       }
     },
     methods: {
@@ -30,7 +29,8 @@
       },
       hideMenu(): void { this.showMenu = false; },
       getCurrentAnchor(): HTMLAnchorElement | undefined {
-        return this.anchors?.find(e => e.innerText.includes(this.currentPage));
+        const anchors = this.$refs.page as Array<HTMLAnchorElement>;
+        return anchors?.find(e => e.innerText.includes(this.currentPage));
       },
       setHeaderHeight(): void {
         const navbar = this.$refs.navRef as HTMLElement;
@@ -90,7 +90,6 @@
       ...mapState(['currentPage'])
     },
     mounted() {
-      this.anchors = this.$refs.page as Array<HTMLAnchorElement>;
       this.onResize();
       this.$nextTick(() => {
         globalThis.addEventListener('resize', this.onResize);
@@ -122,13 +121,15 @@
         <li class="hover-anchor" :style="getHover"></li>
         <template v-for="page in pages">
           <li>
-            <a @click="setCurrentPageEvent($event)"
-              ref="page"
+            <a ref="page" @click="setCurrentPageEvent($event)"
               :class="page.name === currentPage? 'active': null"
-              :href="`#${page.name}`">
+              :href="`#${page.name}`"
+            >
+              <font-awesome-icon class="icon"
+                v-if="windowWidth < $options.MOBILE_MAX_WIDTH"
+                :icon="[...getIcon(page)]"
+              />
               <span>
-                <font-awesome-icon v-if="windowWidth < $options.MOBILE_MAX_WIDTH"
-                :icon="[...getIcon(page)]" />
                 {{page.name}}
               </span>
             </a>
