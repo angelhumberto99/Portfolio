@@ -19,7 +19,7 @@
       <li>Software Engineering</li>
       <li>Web Development</li>
     </ul>
-    <img class="udg-logo" src="../../assets/UDG-Logo.png" alt="UDG Logo"/>
+    <img class="udg-logo" src="@/assets/UDG-Logo.png" alt="UDG Logo"/>
   </section>
 </template>
 

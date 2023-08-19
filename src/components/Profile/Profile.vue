@@ -79,7 +79,7 @@
         </section>
         <section :class="['image-container', show? 'img-show': 'img-hide']">
           <div class="blob">
-            <img src="../../assets/profile-first.png"
+            <img src="@/assets/profile-first.png"
               alt="profile image" :class="getGrayFilter"
             />
           </div>

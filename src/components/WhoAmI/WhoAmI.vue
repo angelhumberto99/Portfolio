@@ -9,7 +9,7 @@
   <hr class="top-hr"/>
   <section class="wrapper">
     <img class="profile" 
-      src="../../assets/profile-second.png"
+      src="@/assets/profile-second.png"
       alt="profile image"
     />
     <article class="description">
@@ -21,11 +21,11 @@
       </p>
       <p>
         Self-taught and passionate about improving and learning
-        new skills that add to my development as a programmer.
+        new skills that helps my development as a programmer.
       </p>
       <p>
-        Prepared to add value to the projects that are presented
-        to me and ready to start working.
+        Prepared to add value to the projects that are presented to me and
+        willing to start working immediately.
       </p>
     </article>
   </section>

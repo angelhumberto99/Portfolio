@@ -24,7 +24,7 @@
       },
       handleSubmit(evt: any): void{
         this.loading = true;
-        const URL = 'https://formsubmit.co/ajax/bcd2dffb96f55003bb407b9f616cb575'
+        const URL = 'https://formsubmit.co/ajax/71aacd68ee6eb6e5bbbee6e3563efa4e'
         const data = new FormData(evt.target)
         const dataJSON = Object.fromEntries(data.entries());
         evt.target.reset();

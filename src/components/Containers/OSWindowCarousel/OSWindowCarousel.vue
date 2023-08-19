@@ -36,8 +36,7 @@
         if (elapsedTime < LONG_CLICK_MS && index >= 0)
           this.index = index;
       },
-      handleClose(type: string): void {
-        console.log(type)
+      handleClose(): void {
         this.$emit('handleClose');
       }
     },
@@ -76,9 +75,11 @@
             </h4>
           </li>
         </ul>
-        <button @click="handleClose('minimize')" class="window-action minimize"/>
-        <button @click="handleClose('maximize')" class="window-action maximize"/>
-        <button @click="handleClose('close')" class="window-action"/>
+        <section class="btn-section">
+          <button @click="handleClose" class="window-action minimize"/>
+          <button @click="handleClose" class="window-action maximize"/>
+          <button @click="handleClose" class="window-action"/>
+        </section>
       </section>
       <section class="header-bottom">
         <p>{{ getFilePath }}</p>

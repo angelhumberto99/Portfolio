@@ -14,11 +14,11 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
-    "nodemailer": "6.9.4",
     "vue": "^3.3.4",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@types/node": "^20.5.1",
     "@vitejs/plugin-vue": "^4.2.3",
     "sass": "^1.63.6",
     "typescript": "^5.0.2",

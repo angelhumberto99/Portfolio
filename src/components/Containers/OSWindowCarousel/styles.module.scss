@@ -32,7 +32,7 @@
   display: flex;
   width: calc(100% - 3rem);
   overflow: scroll hidden;
-  margin: 0 3rem 0 0;
+  margin: 0;
   padding: 0;
   li {
     list-style: none;
@@ -43,10 +43,15 @@
   }
 }
 
+.btn-section {
+  display: flex;
+  padding: 0 .2rem;
+}
+
 .window-action {
   position: relative;
   padding: 0;
-  margin: 0 .2rem 0 0;
+  margin-left: .2rem;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
