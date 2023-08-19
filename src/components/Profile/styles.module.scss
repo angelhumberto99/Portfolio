@@ -47,6 +47,19 @@
   }
 }
 
+.cv {
+  background-color: rgba(31, 39, 94, 0.8);
+  border-radius: 10px;
+  display: block;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  color: #EBF3F3;
+  &:hover {
+    background-color: orange;
+    color: #f1dcaa;
+  }
+}
+
 .image-container {
   display: flex;
   max-width: 500px;
@@ -54,14 +67,18 @@
   justify-content: center;
   margin: 0 2rem;
   max-width: 500px;
-  z-index: -1;
   img {
     width: calc(100% - 2rem);
     margin: 1rem;
     border-radius: 50%;
     background-image: radial-gradient(#2c2f43, #212121);
-    transition: filter 1.5s ease-in-out;
+    transition: filter 0.3s ease-in-out;
+    
   }
+}
+
+.top-layer {
+  z-index: 1;
 }
 
 .gray-filter {

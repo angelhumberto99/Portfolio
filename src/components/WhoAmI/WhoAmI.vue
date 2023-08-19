@@ -9,8 +9,8 @@
   <hr class="top-hr"/>
   <section class="wrapper">
     <img class="profile" 
-    src="../../assets/profile-placeholder.png"
-    alt="profile image"
+      src="../../assets/profile-second.png"
+      alt="profile image"
     />
     <article class="description">
       <h4>Who Am I?</h4>
