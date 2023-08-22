@@ -1,24 +1,6 @@
 [
   {
     "type": "fa",
-    "name": "Python",
-    "iconName": "python",
-    "color": "#007ff4"
-  },
-  {
-    "type": "fa",
-    "name": "Java",
-    "iconName": "java",
-    "color": "#eb3435"
-  },
-  {
-    "type": "fa",
-    "name": "JavaScript",
-    "iconName": "square-js",
-    "color": "#f7e025"
-  },
-  {
-    "type": "fa",
     "name": "HTML",
     "iconName": "html5",
     "color": "#ff5722"
@@ -31,9 +13,21 @@
   },
   {
     "type": "fa",
+    "name": "JavaScript",
+    "iconName": "square-js",
+    "color": "#f7e025"
+  },
+  {
+    "type": "fa",
     "name": "SASS",
     "iconName": "sass",
     "color": "#ce679a"
+  },
+  {
+    "type": "devicon",
+    "name": "TypeScript",
+    "iconName": "typescript-plain",
+    "color": "#007acc"
   },
   {
     "type": "fa",
@@ -55,7 +49,55 @@
   },
   {
     "type": "fa",
-    "name": "Go",
+    "name": "Node.js",
+    "iconName": "node-js",
+    "color": "#91c63d"
+  },
+  {
+    "type": "devicon",
+    "name": "NPM",
+    "iconName": "npm-original-wordmark",
+    "color": "#cc3534"
+  },
+  {
+    "type": "devicon",
+    "name": "Express",
+    "iconName": "express-original",
+    "color": "#1F275E"
+  },
+  {
+    "type": "devicon",
+    "name": "Bootstrap",
+    "iconName": "bootstrap-plain",
+    "color": "#7511f6"
+  },
+  {
+    "type": "fa",
+    "name": "Java",
+    "iconName": "java",
+    "color": "#eb3435"
+  },
+  {
+    "type": "devicon",
+    "name": "Maven",
+    "iconName": "apache-plain",
+    "color": "#e36424"
+  },
+  {
+    "type": "devicon",
+    "name": "SpringBoot",
+    "iconName": "spring-plain",
+    "color": "#6db33f"
+  },
+  {
+    "type": "fa",
+    "name": "Python",
+    "iconName": "python",
+    "color": "#007ff4"
+  },
+  {
+    "type": "fa",
+    "name": "Golang",
     "iconName": "golang",
     "color": "#74cedd"
   },
@@ -67,13 +109,7 @@
   },
   {
     "type": "fa",
-    "name": "Node.js",
-    "iconName": "node-js",
-    "color": "#91c63d"
-  },
-  {
-    "type": "fa",
-    "name": "git",
+    "name": "Git",
     "iconName": "git-alt",
     "color": "#f05133"
   },
@@ -115,7 +151,7 @@
   },
   {
     "type": "devicon",
-    "name": "mySQL",
+    "name": "MySQL",
     "iconName": "mysql-plain",
     "color": "#e48e00"
   },
@@ -133,31 +169,13 @@
   },
   {
     "type": "devicon",
-    "name": "Springboot",
-    "iconName": "spring-plain",
-    "color": "#6db33f"
-  },
-  {
-    "type": "devicon",
-    "name": "Ubuntu",
-    "iconName": "ubuntu-plain",
+    "name": "Linux",
+    "iconName": "linux-plain",
     "color": "#f4751b"
   },
   {
     "type": "devicon",
-    "name": "SDL2",
-    "iconName": "sdl-plain",
-    "color": "#103255"
-  },
-  {
-    "type": "devicon",
-    "name": "NPM",
-    "iconName": "npm-original-wordmark",
-    "color": "#cc3534"
-  },
-  {
-    "type": "devicon",
-    "name": "Numpy",
+    "name": "NumPy",
     "iconName": "numpy-original",
     "color": "#4d77cf"
   },
@@ -166,12 +184,6 @@
     "name": "PHP",
     "iconName": "php-plain",
     "color": "#4f5b93"
-  },
-  {
-    "type": "devicon",
-    "name": "Express",
-    "iconName": "express-original",
-    "color": "#1F275E"
   },
   {
     "type": "devicon",

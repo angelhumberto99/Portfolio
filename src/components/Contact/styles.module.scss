@@ -80,12 +80,12 @@
 
 .show {
   &::after {
-    transition: rotate .4s ease-in-out .3s;
+    transition: rotate .4s ease-in-out .3s, translate .5s ease .3s;
     rotate: 10deg;
   }
 
   &::before {
-    transition: rotate .4s ease-in-out .3s;
+    transition: rotate .4s ease-in-out .3s, translate .5s ease .3s;
     rotate: 20deg;
   }
 }
@@ -178,13 +178,16 @@ textarea {
   .contact-header {
     margin-bottom: 4rem;
   }
+
   .show {
     &::after {
       rotate: none;
+      translate: 0 1rem;
     }
   
     &::before {
       rotate: none;
+      translate: 0 2rem;
     }
   }
 }

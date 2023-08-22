@@ -103,6 +103,6 @@ $shadow: 15px 15px 15px rgba(0, 0, 0, .5);
 
 @media screen and (max-width: 768px) and (max-height: 768px) {
   .overlay-content {
-    height: 90%;
+    height: 90dvh;
   }
 }

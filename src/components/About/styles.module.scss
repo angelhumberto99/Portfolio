@@ -5,13 +5,13 @@
 }
 
 .show {
-  transition: translate .5s ease-in-out, opacity 1s ease-in-out;
+  transition: translate .7s ease-in-out, opacity 1s ease-in-out;
   translate: 0%;
   opacity: 1;
 }
 
 .hide {
-  translate: 0 -100%;
+  translate: -100%;
   opacity: 0;
 }
 
@@ -70,5 +70,12 @@
   .section-wrapper {
     margin-top: 0;
     padding: 2.5rem 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .skills.hide {
+    background-color: red;
+    translate: 100%;
   }
 }

@@ -42,9 +42,9 @@
   </div>
   <h4>Languajes</h4>
   <ul>
-    <li>Spanish - Native speaker</li>
-    <li>English - Advanced</li>
-    <li>German - Conversational</li>
+    <li>Spanish - Native speaker.</li>
+    <li>English - Advanced.</li>
+    <li>German - Conversational.</li>
   </ul>
 </template>
 

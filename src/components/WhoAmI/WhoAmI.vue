@@ -20,12 +20,12 @@
         motivated to innovate and implement high quality pieces of software.
       </p>
       <p>
-        Self-taught and passionate about improving and learning
-        new skills that helps my development as a programmer.
+        Self-taught and passionate about improving and learning new skills 
+        that help me be at the forefront of the software development industry.
       </p>
       <p>
-        Prepared to add value to the projects that are presented to me and
-        willing to start working immediately.
+        Prepared to add value to the projects presented to me, and willing
+        to start working immediately.
       </p>
     </article>
   </section>

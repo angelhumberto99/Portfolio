@@ -1,5 +1,5 @@
 {
-  "Assist": {
+  "ASSIST": {
     "date": "June 22 2022",
     "type": "Desktop",
     "imgs": [
@@ -7,7 +7,7 @@
       "2-Ticket-System.jpg",
       "3-Widget.jpg"
     ],
-    "description": "Intelligent virtual assistant / Ticket system built to resolve technical questions and report malfunctioning of the platform where it is implemented.",
+    "description": "Intelligent virtual assistant and ticket system built to resolve technical questions and report malfunctioning of the platform where it is implemented.",
     "longDescription": [
       "The UDG (Universidad de Guadalajara) has at its disposal its own system for the financial management of its academic centers known as the SIGI system (Integral Management and Information System).",
       "Unfortunately, the UDG software development team, in addition to their tasks as programmers, also had to be in charge of answering questions and reports on the SIGI platform, which greatly hindered the development of other systems.",
@@ -186,7 +186,7 @@
       "4-Schedule.jpg",
       "5-Register.jpg"
     ],
-    "description": "School course manager for students and educators.",
+    "description": "School course manager system for students and educators.",
     "longDescription": [
       "Theam was one of my first web pages, it was my final project for the software engineering course, in which my team and I had to assume the role of project managers.",
       "We had to interview a third party to plan and implement software that would meet his needs, using project management techniques and agile methodologies.",
